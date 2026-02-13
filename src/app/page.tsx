@@ -22,13 +22,12 @@ export default function Home() {
       {/* Hero Section */}
       <section className={styles.hero}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Your Smile is Our Top Priority</h1>
+          <h1 className={styles.heroTitle}>Writing the Future of Dental Health</h1>
           <p className={styles.heroSubtitle}>
-            Experience world-class dental care in a comfortable and relaxing environment. 
-            We use the latest technology to ensure your smile stays healthy and beautiful.
+            Precision biology meets advanced dentistry. We use synthetic biology principles to engineer the perfect smile, tailored to your unique genetic blueprint.
           </p>
           <button className={styles.bookBtn} style={{ padding: '1rem 2rem', fontSize: '1.1rem' }}>
-            Get Started Today
+            Discover Our Platform
           </button>
         </div>
         <div className={styles.heroImage}>
@@ -38,33 +37,33 @@ export default function Home() {
 
       {/* Services Section */}
       <section id="services" className={styles.services}>
-        <h2 className={styles.sectionTitle}>Our Services</h2>
+        <h2 className={styles.sectionTitle}>Our Platform</h2>
         <p className={styles.sectionSubtitle}>
-          Comprehensive dental solutions tailored to your unique needs.
+          Scalable, high-throughput dental solutions powered by silicon-based technology.
         </p>
         
         <div className={styles.servicesGrid}>
           <div className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>✨</span>
-            <h3 className={styles.serviceTitle}>Cosmetic Dentistry</h3>
+            <span className={styles.serviceIcon}>🧬</span>
+            <h3 className={styles.serviceTitle}>Synthetic Enamel</h3>
             <p className={styles.serviceDesc}>
-              Transform your smile with whitening, veneers, and bonding. We design smiles that look natural and radiant.
+              Proprietary bio-printed enamel that mimics natural tooth structure at the molecular level for seamless restoration.
             </p>
           </div>
           
           <div className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>🛡️</span>
-            <h3 className={styles.serviceTitle}>Preventive Care</h3>
+            <span className={styles.serviceIcon}>🔬</span>
+            <h3 className={styles.serviceTitle}>Precision Diagnostics</h3>
             <p className={styles.serviceDesc}>
-              Regular check-ups, cleanings, and x-rays to keep your teeth and gums healthy and prevent future issues.
+              Next-generation sequencing for oral microbiome analysis, enabling targeted preventive care plans.
             </p>
           </div>
 
           <div className={styles.serviceCard}>
-            <span className={styles.serviceIcon}>🔧</span>
-            <h3 className={styles.serviceTitle}>Restorative Dentistry</h3>
+            <span className={styles.serviceIcon}>⚙️</span>
+            <h3 className={styles.serviceTitle}>Bio-Implants</h3>
             <p className={styles.serviceDesc}>
-              Implants, crowns, and bridges to restore function and aesthetics to your smile with durable materials.
+              Biocompatible implants designed with generative AI to integrate perfectly with your jawbone physiology.
             </p>
           </div>
         </div>
