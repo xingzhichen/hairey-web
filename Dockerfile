@@ -11,7 +11,7 @@ WORKDIR /app
 RUN corepack enable pnpm
 
 COPY package.json pnpm-lock.yaml ./
-RUN pnpm i --frozen-lockfile
+RUN pnpm i
 
 # 构建阶段
 FROM base AS builder
