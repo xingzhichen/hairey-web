@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Hairey Dental | Your Perfect Smile",
-  description: "Professional dental care services for you and your family.",
+  title: "Hairey Dental | Precision Dentistry",
+  description: "Next-Gen Dental Biotechnology",
 };
 
 export default function RootLayout({
@@ -16,8 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        {children}
+      <body className="antialiased bg-background text-foreground font-sans">
+        <Header />
+        <main className="min-h-screen pt-20">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );
