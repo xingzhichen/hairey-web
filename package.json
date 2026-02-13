@@ -5,7 +5,7 @@
   "packageManager": "pnpm@7.33.7",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/compress-images.mjs && next build",
+    "build": "imagemin public/* --out-dir=public && next build",
     "start": "next start",
     "lint": "eslint"
   },
@@ -21,7 +21,6 @@
     "babel-plugin-react-compiler": "1.0.0",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "sharp": "^0.33.2",
     "typescript": "^5"
   }
 }
