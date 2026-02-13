@@ -18,6 +18,7 @@ gcloud run deploy $SERVICE_NAME \
   --region $REGION \
   --platform managed \
   --allow-unauthenticated \
+  --build-service-account projects/$PROJECT_ID/serviceAccounts/github-actions-deployer@xingzhichen.iam.gserviceaccount.com \
   --memory 512Mi \
   --timeout 300s
 
