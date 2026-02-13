@@ -14,6 +14,10 @@ const nextConfig = {
         hostname: 'storage.googleapis.com',
         pathname: '/hairey-web/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
     ],
   },
   // 配置环境变量（可选）
