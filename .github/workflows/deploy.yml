@@ -1,0 +1,52 @@
+name: Deploy to Cloud Run
+
+on:
+  push:
+    branches:
+      - master
+      - main  # 同时监听 main 分支，因为很多新仓库默认是 main
+
+env:
+  PROJECT_ID: xingzhichen
+  SERVICE_NAME: hairey-web
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        region: 
+          - us-central1  # 美国中部 (最佳单点选择，覆盖全球均衡)
+          # 如需全球多点部署，取消以下注释 (需配合负载均衡器实现统一入口):
+          # - asia-northeast1  # 亚洲 (东京)
+          # - europe-west1     # 欧洲 (比利时)
+
+    # Add "id-token" with the intended permissions.
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Google Auth
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v2'
+        with:
+          credentials_json: '${{ secrets.GCP_SA_KEY }}'
+
+      # Set up Cloud SDK
+      - name: 'Set up Cloud SDK'
+        uses: 'google-github-actions/setup-gcloud@v2'
+
+      # Build and Deploy to Cloud Run
+      - name: 'Deploy to Cloud Run'
+        uses: 'google-github-actions/deploy-cloudrun@v2'
+        with:
+          service: '${{ env.SERVICE_NAME }}'
+          region: '${{ matrix.region }}'
+          source: '.'
+          project_id: '${{ env.PROJECT_ID }}'
+          # 使用 deploy.sh 中定义的参数
+          flags: '--allow-unauthenticated --memory 512Mi --timeout 300s'
