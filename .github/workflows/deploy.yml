@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - master
-      - main  # 同时监听 main 分支，因为很多新仓库默认是 main
 
 env:
   PROJECT_ID: xingzhichen
@@ -41,6 +40,14 @@ jobs:
       - name: 'Set up Cloud SDK'
         uses: 'google-github-actions/setup-gcloud@v2'
 
+      # Upload assets to GCS
+      - name: 'Upload Assets to GCS'
+        uses: 'google-github-actions/upload-cloud-storage@v1'
+        with:
+          path: 'public'
+          destination: 'hairey-web'
+          parent: false
+          
       # Build and Deploy to Cloud Run
       - name: 'Deploy to Cloud Run'
         uses: 'google-github-actions/deploy-cloudrun@v2'
@@ -49,5 +56,7 @@ jobs:
           region: '${{ matrix.region }}'
           source: '.'
           project_id: '${{ env.PROJECT_ID }}'
+          # 注入资源域名
+          env_vars: 'NEXT_PUBLIC_ASSET_HOST=https://storage.googleapis.com/hairey-web'
           # 使用 deploy.sh 中定义的参数
           flags: '--allow-unauthenticated --memory 512Mi --timeout 300s'
