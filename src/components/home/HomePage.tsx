@@ -33,7 +33,7 @@ export const HomePage = () => {
         <motion.div style={{ y: yHero }} className={styles.heroBackground}>
           <div className={styles.heroOverlay} />
           <Image 
-            src="/images/banner.png" 
+            src="/images/hairey-banner.png" 
             alt="Dental Biotechnology"
             fill
             priority
