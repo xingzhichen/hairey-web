@@ -30,6 +30,29 @@ const nextConfig = {
       },
     ];
   },
+  // 配置 next/image 允许的域名
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+         {
+        protocol: 'https',
+        hostname: 'storage.googleapis.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'www.hairey.net',
+        pathname: '/**',
+      },
+    ],
+  },
+  // 允许跨域开发访问
+  experimental: {
+    allowedDevOrigins: ['localhost:3000', '192.168.3.16:3000'],
+  },
   // 配置环境变量（可选）
   env: {
     NEXT_PUBLIC_GOOGLE_PROJECT_ID: process.env.NEXT_PUBLIC_GOOGLE_PROJECT_ID,
