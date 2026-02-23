@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { StructuredData } from "@/components/StructuredData";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -13,9 +14,24 @@ export const metadata: Metadata = {
   description: "Hairey - Next-Gen Dental Biotechnology. Delivering high-performance digital restoration solutions to clinics worldwide through advanced materials and precision engineering.",
   keywords: ["Hairey", "dental biotechnology", "digital restoration", "precision dentistry", "dental materials", "digital workflow", "biomaterials"],
   icons: {
-    icon: '/images/logo.png',
-    shortcut: '/images/logo.png',
+    icon: [
+      {
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+      {
+        url: '/images/logo.png',
+      },
+    ],
+    shortcut: '/favicon.svg',
     apple: '/images/logo.png',
+    other: [
+      {
+        rel: 'icon',
+        url: '/favicon.svg',
+        type: 'image/svg+xml',
+      },
+    ],
   },
   authors: [{ name: "Hairey Dental Technology Co., Ltd." }],
   creator: "Hairey Dental",
@@ -69,6 +85,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <StructuredData />
+        <WhatsAppButton />
       </body>
     </html>
   );
