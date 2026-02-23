@@ -8,7 +8,26 @@ const nextConfig = {
   assetPrefix: process.env.NEXT_PUBLIC_ASSET_HOST || undefined,
   async headers() {
     return [
-      // 静态资源
+      // 静态资源 (public/*)
+      {
+        source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/(favicon.ico|robots.txt|sitemap.xml)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, s-maxage=86400",
+          },
+        ],
+      },
+      // Next.js 静态资源
       {
         source: "/_next/static/(.*)",
         headers: [

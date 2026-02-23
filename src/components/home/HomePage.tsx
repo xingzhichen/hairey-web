@@ -67,20 +67,20 @@ export const HomePage = () => {
               Dentistry
             </h1>
             <p className={styles.heroDescription}>
-              Hairey 正在重新定义牙科数字化工作流。通过合成材料与精密工程的结合，我们为全球诊所提供高性能的数字化修复解决方案。
+              Hairey is redefining dental digital workflows. Through advanced synthetic materials and precision engineering, we deliver high-performance digital restoration solutions to clinics worldwide.
             </p>
             <div className={styles.buttonGroup}>
               <Link 
                 href="/product" 
                 className={styles.primaryButton}
               >
-                开始探索 <ArrowRight className={styles.iconRight} size={20} />
+                Explore Now <ArrowRight className={styles.iconRight} size={20} />
               </Link>
               <Link 
                 href="/about" 
                 className={styles.secondaryButton}
               >
-                了解我们的使命
+                Our Mission
               </Link>
             </div>
           </motion.div>
@@ -102,10 +102,10 @@ export const HomePage = () => {
             className={styles.grid}
           >
             {[
-              { icon: Microscope, title: '精密研发', desc: '基于分子生物学的牙科材料创新。', color: 'hsl(var(--primary))' },
-              { icon: Zap, title: '极速交付', desc: '全数字化流程，缩短 50% 的诊疗周期。', color: 'hsl(var(--accent))' },
-              { icon: Shield, title: '国际认证', desc: '符合最高标准的医疗器械安全验证。', color: 'hsl(217, 91%, 60%)' }, // blue-500
-              { icon: Activity, title: '临床优化', desc: '专为提升患者舒适度与长期稳固性而设计。', color: 'hsl(158, 64%, 52%)' }, // emerald-500
+              { icon: Microscope, title: 'Precision R&D', desc: 'Dental material innovation based on molecular biology.', color: 'hsl(var(--primary))' },
+              { icon: Zap, title: 'Fast Delivery', desc: 'Full digital workflow reduces treatment time by 50%.', color: 'hsl(var(--accent))' },
+              { icon: Shield, title: 'International Certification', desc: 'Meeting the highest standards for medical device safety.', color: 'hsl(217, 91%, 60%)' },
+              { icon: Activity, title: 'Clinical Optimization', desc: 'Designed for superior patient comfort and long-term stability.', color: 'hsl(158, 64%, 52%)' },
             ].map((item, idx) => (
               <motion.div 
                 key={idx}
@@ -118,7 +118,7 @@ export const HomePage = () => {
                 <h3 className={styles.cardTitle}>{item.title}</h3>
                 <p className={styles.cardDesc}>{item.desc}</p>
                 <div className={styles.cardLink}>
-                  了解更多 <ChevronRight size={16} />
+                  Learn More <ChevronRight size={16} />
                 </div>
               </motion.div>
             ))}
@@ -148,8 +148,8 @@ export const HomePage = () => {
               />
               <div className={styles.statCard}>
                 <div className={styles.statNumber}>99.9%</div>
-                <div className={styles.statLabel}>修复成功率</div>
-                <div className={styles.statDesc}>基于全球 50,000+ 临床案例追踪。</div>
+                <div className={styles.statLabel}>Restoration Success Rate</div>
+                <div className={styles.statDesc}>Based on 50,000+ global clinical cases tracked.</div>
               </div>
             </motion.div>
             
@@ -160,16 +160,16 @@ export const HomePage = () => {
               transition={{ duration: 1 }}
               className={styles.halfWidth}
             >
-              <h2 className={styles.sectionTitle}>赋予牙科科学<br />无限可能</h2>
+              <h2 className={styles.sectionTitle}>Powering Dental<br />Science Forward</h2>
               <p className={styles.sectionDesc} style={{ margin: '2.5rem 0' }}>
-                Hairey 不仅仅是一家材料供应商，我们是数字化转型的合伙人。我们通过专有的生物合成技术，开发出具有自然美学与极高耐磨性的新型材料。
+                Hairey is more than a material supplier—we are your digital transformation partner. Through proprietary biosynthetic technology, we develop new materials with natural aesthetics and exceptional wear resistance.
               </p>
               
               <div className={styles.featureList}>
                 {[
-                  { t: '数字化扫描集成', d: '无缝对接主流口内扫描设备。' },
-                  { t: '生物活性修复体', d: '促进软组织整合，减少炎症风险。' },
-                  { t: '云端协同设计', d: '全球顶级牙技师实时在线协作。' }
+                  { t: 'Digital Scan Integration', d: 'Seamless integration with major intraoral scanners.' },
+                  { t: 'Bioactive Restorations', d: 'Promotes soft tissue integration, reduces inflammation risk.' },
+                  { t: 'Cloud Collaborative Design', d: 'Real-time collaboration with top dental technicians worldwide.' }
                 ].map((feature, i) => (
                   <motion.div 
                     key={i}
@@ -188,7 +188,7 @@ export const HomePage = () => {
               </div>
 
               <Link href="/service" className={styles.linkButton} style={{ marginTop: '2.5rem' }}>
-                探索我们的服务流程 <ArrowRight className={styles.iconRight} style={{ marginLeft: '0.5rem' }} />
+                Explore Our Service Flow <ArrowRight className={styles.iconRight} style={{ marginLeft: '0.5rem' }} />
               </Link>
             </motion.div>
           </div>
@@ -208,14 +208,14 @@ export const HomePage = () => {
             style={{ maxWidth: '56rem', margin: '0 auto' }}
           >
             <h2 className={styles.ctaTitle}>
-              开启您的数字化<br /><span className={styles.highlight}>牙科实验室</span>之旅
+              Start Your Digital<br /><span className={styles.highlight}>Dental Lab</span> Journey
             </h2>
             <div className={styles.ctaButtons}>
               <Link href="/contact" className={styles.ctaPrimary}>
-                立即咨询专家
+                Consult an Expert Now
               </Link>
               <Link href="/product" className={styles.ctaSecondary}>
-                产品手册下载
+                Download Product Brochure
               </Link>
             </div>
           </motion.div>
