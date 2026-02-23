@@ -1,0 +1,577 @@
+.pageContainer {
+  padding-top: 6rem;
+  min-height: 100vh;
+  background-color: white;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Hero Section */
+.heroSection {
+  padding: 6rem 0;
+  background-color: hsl(var(--secondary));
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroSectionLight {
+  padding: 6rem 0;
+  background-color: #f8fafc;
+  position: relative;
+  overflow: hidden;
+}
+
+.heroBgOverlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.heroBgImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.heroTitleLight {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  color: hsl(var(--secondary));
+}
+
+@media (min-width: 768px) {
+  .heroTitle, .heroTitleLight {
+    font-size: 4.5rem;
+  }
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  color: #cbd5e1; /* slate-300 */
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.heroSubtitleLight {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 48rem;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Sections */
+.section {
+  padding: 8rem 0;
+}
+
+.sectionLight {
+  background-color: #f8fafc; /* slate-50 */
+}
+
+.sectionTitle {
+  font-size: 2.25rem;
+  font-weight: 900;
+  color: hsl(var(--secondary));
+  margin-bottom: 1.5rem;
+}
+
+.sectionDesc {
+  font-size: 1.125rem;
+  color: #475569; /* slate-600 */
+  line-height: 1.6;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: 3rem;
+}
+
+.grid2 {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 1024px) {
+  .grid2 {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+  }
+}
+
+.grid3 {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.grid4 {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .grid4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Cards & Items */
+.card {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid #f1f5f9; /* slate-100 */
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.statCard {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background-color: #f8fafc;
+}
+
+.statValue {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: hsl(var(--secondary));
+}
+
+.statLabel {
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.iconBox {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: hsl(var(--secondary));
+  margin-bottom: 1rem;
+}
+
+.cardDesc {
+  color: #64748b; /* slate-500 */
+  line-height: 1.6;
+}
+
+/* Typography Helpers */
+.textPrimary {
+  color: hsl(var(--primary));
+}
+
+.textSecondary {
+  color: hsl(var(--secondary));
+}
+
+.textSlate {
+  color: #64748b;
+}
+
+/* Images */
+.roundedImage {
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: auto;
+}
+
+.relative {
+  position: relative;
+}
+
+.absoluteBg {
+  position: absolute;
+  top: -2.5rem;
+  left: -2.5rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: hsl(var(--accent) / 0.2);
+  border-radius: 9999px;
+  filter: blur(40px);
+  z-index: -1;
+}
+
+/* Form Styles (Contact) */
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: hsl(var(--secondary));
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  width: 100%;
+  background-color: #f8fafc;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem 1.5rem;
+  transition: box-shadow 0.3s;
+}
+
+.input:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--primary));
+}
+
+.button {
+  width: 100%;
+  background-color: hsl(var(--primary));
+  color: white;
+  padding: 1.25rem;
+  border-radius: 1rem;
+  font-weight: 900;
+  font-size: 1.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s;
+  border: none;
+}
+
+.button:hover {
+  background-color: hsl(var(--secondary));
+}
+
+/* Docs Styles */
+.docsLayout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .docsLayout {
+    flex-direction: row;
+  }
+}
+
+.sidebar {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@media (min-width: 1024px) {
+  .sidebar {
+    width: 16rem;
+  }
+}
+
+.searchBox {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.625rem 1rem 0.625rem 2.5rem;
+  background-color: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.searchInput:focus {
+  box-shadow: 0 0 0 2px hsl(var(--primary) / 0.2);
+  border-color: hsl(var(--primary));
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  color: #94a3b8;
+}
+
+.navSectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+}
+
+.navButton {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+}
+
+.navButton:hover {
+  background-color: hsl(var(--primary) / 0.05);
+}
+
+.navButtonActive {
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+.navButtonDisabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.docsContent {
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  border: 1px solid #f1f5f9;
+}
+
+.prose h1 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: hsl(var(--secondary)); }
+.prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: hsl(var(--secondary)); }
+.prose p { margin-bottom: 1rem; line-height: 1.7; color: #475569; }
+.prose ul { margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc; color: #475569; }
+.prose li { margin-bottom: 0.5rem; }
+.prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; }
+.prose code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.875rem; color: #0f172a; }
+
+/* Product Page Specific */
+.productCard {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 2.5rem;
+  overflow: hidden;
+  border: 1px solid #f1f5f9;
+  transition: all 0.5s;
+}
+
+.productCard:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .productCard {
+    flex-direction: row;
+  }
+}
+
+.productImage {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .productImage {
+    width: 40%;
+    height: auto;
+  }
+}
+
+.productContent {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.categoryTag {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+}
+
+/* Service Page specific */
+.serviceNumber {
+  width: 5rem;
+  height: 5rem;
+  background-color: hsl(var(--primary) / 0.1);
+  color: hsl(var(--primary));
+  border-radius: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s;
+}
+
+.card:hover .serviceNumber {
+  background-color: hsl(var(--primary));
+  color: white;
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 700;
+  color: hsl(var(--secondary));
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 10rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(var(--secondary));
+}
+
+.ctaPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.ctaTitle {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .ctaTitle {
+    font-size: 4.5rem;
+  }
+}
+
+.highlight {
+  color: hsl(var(--primary));
+}
+
+.ctaButtons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.ctaPrimary {
+  background-color: hsl(var(--accent));
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 25px 50px -12px hsl(var(--accent) / 0.4);
+  transition: transform 0.3s;
+}
+
+.ctaPrimary:hover {
+  transform: scale(1.05);
+}
+
+.ctaSecondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 1.5rem 3rem;
+  border-radius: 9999px;
+  font-weight: 900;
+  font-size: 1.25rem;
+  transition: background-color 0.3s;
+}
+
+.ctaSecondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
