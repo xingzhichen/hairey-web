@@ -1,0 +1,11 @@
+2026-02-24 15:31:44: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:31:44: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:31:44: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:31:44: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:31:44: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
