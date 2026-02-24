@@ -9,3 +9,163 @@
    * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
 
 2026-02-24 15:31:44: ⚠ "next start" does not work with "output: standalone" configuration. Use "node .next/standalone/server.js" instead.
+2026-02-24 15:34:46: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:46: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:46: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:46: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:46: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:46: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:46: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:46: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:47: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:47: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:47: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:47: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:47: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:47: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:47: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:47: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:47: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:47: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:47: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:47: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:48: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:48: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:48: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:48: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:48: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:48: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:48: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:48: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:49: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:49: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:49: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:49: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:49: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:49: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:49: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:49: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:50: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:50: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:50: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:50: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:50: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:50: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:50: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:50: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:50: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:50: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:50: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:50: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:51: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:51: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:51: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:51: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:51: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:51: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:51: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:51: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:52: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:52: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:52: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:52: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
+2026-02-24 15:34:52: ⚠ Invalid next.config.ts options detected: 
+2026-02-24 15:34:52: ⚠     Unrecognized key(s) in object: 'allowedDevOrigins' at "experimental"
+2026-02-24 15:34:52: ⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+2026-02-24 15:34:52: ⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/bytedance/yarn.lock as the root directory.
+ To silence this warning, set `outputFileTracingRoot` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/output#caveats for more information.
+ Detected additional lockfiles: 
+   * /Users/bytedance/xzc/hairey-web/pnpm-lock.yaml
+
