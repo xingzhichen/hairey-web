@@ -110,6 +110,9 @@
   border: none;
   padding: 0;
   transition: color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .iconBtn:hover {
@@ -131,24 +134,30 @@
   background-color: hsl(var(--secondary));
 }
 
-/* Mobile Toggle */
+/* Mobile Actions & Toggle */
+.mobileActions {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .mobileActions {
+    display: none;
+  }
+}
+
 .mobileToggle {
   display: block;
   color: hsl(var(--secondary));
   background: none;
   border: none;
-}
-
-@media (min-width: 1024px) {
-  .mobileToggle {
-    display: none;
-  }
+  padding: 0;
 }
 
 /* Mobile Menu */
 .mobileMenu {
   display: block;
-  background-color: white;
+  background-color: hsl(var(--background)); /* Ensure theme bg */
   border-top: 1px solid hsl(var(--secondary) / 0.1);
   overflow: hidden;
 }

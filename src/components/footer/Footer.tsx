@@ -41,16 +41,6 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Solutions */}
-          <div className={styles.column}>
-            <h4 className={styles.columnTitle}>解决方案</h4>
-            <ul className={styles.linkList}>
-              <li><a href="#" className={styles.linkItem}>数字化种植修复</a></li>
-              <li><a href="#" className={styles.linkItem}>美学贴面系统</a></li>
-              <li><a href="#" className={styles.linkItem}>AI 辅助临床诊断</a></li>
-              <li><a href="#" className={styles.linkItem}>材料定制开发</a></li>
-            </ul>
-          </div>
 
           {/* Contact Info */}
           <div className={styles.column}>
