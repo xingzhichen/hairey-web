@@ -48,15 +48,11 @@ export const Footer = () => {
             <ul className={styles.linkList}>
               <li className={styles.contactItem}>
                 <MapPin size={20} className={styles.icon} />
-                <span>上海市浦东新区张江高科<br />科苑路创新园</span>
-              </li>
-              <li className={styles.contactItem}>
-                <Phone size={20} className={styles.icon} />
-                <span>400-888-HAIREY</span>
+                <span>深圳坪山高新区产学研基地</span>
               </li>
               <li className={styles.contactItem}>
                 <Mail size={20} className={styles.icon} />
-                <span>info@hairey-dental.com</span>
+                <span>scarlett.guo@hairey.net</span>
               </li>
             </ul>
           </div>

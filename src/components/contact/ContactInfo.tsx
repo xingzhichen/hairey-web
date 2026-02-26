@@ -17,9 +17,8 @@ export const ContactInfo = () => {
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         {[
-          { icon: Phone, title: '全国咨询热线', content: '400-888-HAIREY (424739)', sub: '周一至周五 9:00 - 18:00' },
-          { icon: Mail, title: '技术支持邮箱', content: 'support@hairey-dental.com', sub: '针对临床技术问题的专业解答' },
-          { icon: MapPin, title: '全球总部', content: '上海市浦东新区张江高科技园区', sub: '创新研发中心' },
+          { icon: Mail, title: '技术支持邮箱', content: 'scarlett.guo@hairey.net', sub: '针对临床技术问题的专业解答' },
+          { icon: MapPin, title: '全球总部', content: '深圳坪山高新区产学研基地', sub: '' },
         ].map((item, i) => (
           <motion.div 
             key={i}
@@ -32,20 +31,10 @@ export const ContactInfo = () => {
             <div>
               <h4 style={{ fontWeight: 700, fontSize: '1.125rem', color: 'hsl(var(--secondary))', marginBottom: '0.25rem' }}>{item.title}</h4>
               <p style={{ fontSize: '1.25rem', fontWeight: 900, color: 'hsl(var(--secondary))' }}>{item.content}</p>
-              <p style={{ fontSize: '0.875rem', color: '#64748b', marginTop: '0.25rem' }}>{item.sub}</p>
+              {item.sub && <p style={{ fontSize: '0.875rem', color: '#64748b', marginTop: '0.25rem' }}>{item.sub}</p>}
             </div>
           </motion.div>
         ))}
-      </div>
-
-      <div style={{ padding: '2rem', borderRadius: '2rem', backgroundColor: 'hsl(var(--accent) / 0.05)', border: '1px solid hsl(var(--accent) / 0.1)' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', color: 'hsl(var(--accent))', fontWeight: 900, marginBottom: '1rem' }}>
-          <Clock size={20} />
-          <span>服务承诺</span>
-        </div>
-        <p style={{ color: '#475569', lineHeight: 1.6 }}>
-          作为您的数字化伙伴，我们深知临床工作的紧迫性。针对设备故障，我们承诺在主要城市实现 12 小时内上门修复服务。
-        </p>
       </div>
     </div>
   );

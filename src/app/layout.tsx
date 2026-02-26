@@ -3,6 +3,7 @@ import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { StructuredData } from "@/components/StructuredData";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -86,6 +87,7 @@ export default function RootLayout({
         <Footer />
         <StructuredData />
         <WhatsAppButton />
+        <Toaster position="top-right" richColors />
       </body>
     </html>
   );
