@@ -1,4 +1,6 @@
 #!/bin/bash
+pm2 stop all
+
 pnpm install
 
 pnpm run build

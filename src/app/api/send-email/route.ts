@@ -12,16 +12,16 @@ export async function POST(request: Request) {
       );
     }
 
-    const RECIPIENT_EMAIL = process.env.RECIPIENT_EMAIL || 'your-email@example.com';
-    const SMTP_HOST = process.env.SMTP_HOST || 'smtp.gmail.com';
-    const SMTP_PORT = parseInt(process.env.SMTP_PORT || '587');
-    const SMTP_USER = process.env.SMTP_USER || '';
-    const SMTP_PASS = process.env.SMTP_PASS || '';
+    const RECIPIENT_EMAIL = 'scarlett.guo@hairey.net';
+    const SMTP_HOST = 'smtp.gmail.com';
+    const SMTP_PORT = 465;
+    const SMTP_USER =  'xingzhichenshuai@gmail.com';
+    const SMTP_PASS = 'tngg wmew xtdn ehmo';
 
     const transporter = nodemailer.createTransport({
       host: SMTP_HOST,
       port: SMTP_PORT,
-      secure: SMTP_PORT === 465,
+      secure: true,
       auth: {
         user: SMTP_USER,
         pass: SMTP_PASS,
@@ -29,7 +29,7 @@ export async function POST(request: Request) {
     });
 
     const mailOptions = {
-      from: `"${name}" <${email}>`,
+      from: SMTP_USER ? `"${name}" <${SMTP_USER}>` : `"${name}" <${email}>`,
       to: RECIPIENT_EMAIL,
       subject: `[Hairey Contact] ${subject}`,
       text: `

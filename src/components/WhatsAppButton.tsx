@@ -17,10 +17,11 @@ export const WhatsAppButton = () => {
       aria-label="Contact us on WhatsApp"
     >
       <MessageCircle 
-        size={28} 
+        size={24} 
         className={styles.whatsappIcon}
         strokeWidth={2.5}
       />
+      <span className={styles.whatsappText}>Hi! Need help? Chat with us on WhatsApp</span>
     </a>
   );
 };

@@ -66,6 +66,10 @@ const nextConfig = {
         hostname: 'www.hairey.net',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'placehold.co',
+      },
     ],
   },
   // 允许跨域开发访问

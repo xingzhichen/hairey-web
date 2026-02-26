@@ -2,26 +2,43 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-  width: 4rem;
-  height: 4rem;
   background-color: #25D366;
+  color: white;
+  padding: 0.75rem 1.5rem;
   border-radius: 9999px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+  gap: 0.75rem;
   z-index: 1000;
-  transition: all 0.3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
   border: none;
   cursor: pointer;
 }
 
 .whatsappButton:hover {
-  transform: scale(1.1);
-  box-shadow: 0 20px 25px -5px rgba(37, 211, 102, 0.5);
+  transform: translateY(-2px) scale(1.02);
 }
 
 .whatsappIcon {
   color: white;
+  flex-shrink: 0;
+}
+
+.whatsappText {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .whatsappButton {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.6rem 1.2rem;
+  }
+  
+  .whatsappText {
+    font-size: 0.85rem;
+  }
 }

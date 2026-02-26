@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 
@@ -21,10 +21,10 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: '首页', path: '/' },
-    { name: '创新产品', path: '/product' },
-    { name: '专业服务', path: '/service' },
-    { name: '联系我们', path: '/contact' },
+    { name: 'Home', path: '/' },
+    { name: 'About Us', path: '/about' },
+    { name: 'Product', path: '/product' },
+    { name: 'Contact Us', path: '/contact' },
   ];
 
   return (
@@ -56,25 +56,24 @@ export const Header = () => {
               </Link>
             ))}
             <div className={styles.actionGroup}>
-              <button className={styles.iconBtn}>
-                <Globe size={20} />
-              </button>
               <Link 
                 href="/contact" 
                 className={styles.ctaBtn}
               >
-                获取方案
+                Get Quote
               </Link>
             </div>
           </div>
 
           {/* Mobile Toggle */}
-          <button 
-            className={styles.mobileToggle}
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
+          <div className={styles.mobileActions}>
+            <button 
+              className={styles.mobileToggle}
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={28} /> : <Menu size={28} />}
+            </button>
+          </div>
         </nav>
       </div>
 
@@ -105,7 +104,7 @@ export const Header = () => {
                 onClick={() => setIsOpen(false)}
                 className={styles.mobileCta}
               >
-                立即联系
+                Contact Now
               </Link>
             </div>
           </motion.div>
