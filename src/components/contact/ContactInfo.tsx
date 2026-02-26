@@ -9,16 +9,16 @@ export const ContactInfo = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
       <div>
-        <h2 className={styles.sectionTitle}>快速联络方式</h2>
+        <h2 className={styles.sectionTitle}>Contact Channels</h2>
         <p className={styles.sectionDesc}>
-          我们致力于在 24 小时内回复您的咨询。您可以直接拨打电话，或通过下方的在线表单发送信息。
+          We are committed to responding to your inquiries within 24 hours. You can call us directly or send a message via the online form below.
         </p>
       </div>
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         {[
-          { icon: Mail, title: '技术支持邮箱', content: 'scarlett.guo@hairey.net', sub: '针对临床技术问题的专业解答' },
-          { icon: MapPin, title: '全球总部', content: '深圳坪山高新区产学研基地', sub: '' },
+          { icon: Mail, title: 'Technical Support', content: 'scarlett.guo@hairey.net', sub: 'Professional answers for clinical technical questions' },
+          { icon: MapPin, title: 'Global Headquarters', content: 'Shenzhen Pingshan High-tech Zone Industry-University-Research Base', sub: '' },
         ].map((item, i) => (
           <motion.div 
             key={i}

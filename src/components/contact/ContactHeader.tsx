@@ -18,10 +18,10 @@ export const ContactHeader = () => {
             animate={{ opacity: 1, y: 0 }}
             className={styles.heroTitleLight}
           >
-            联系 <span className={styles.textPrimary}>HAIREY</span>
+            Contact <span className={styles.textPrimary}>HAIREY</span>
           </motion.h1>
           <p className={styles.heroSubtitleLight}>
-            无论是技术咨询、产品订购还是寻求合作，我们的专家团队都将为您提供即时响应。
+            Whether for technical consultation, product ordering, or partnership inquiries, our expert team is ready to provide immediate response.
           </p>
         </div>
       </div>

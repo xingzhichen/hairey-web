@@ -157,14 +157,14 @@ export const ContactForm = () => {
         >
           {status === 'loading' ? (
             <>
-              <span>发送中...</span>
+              <span>Sending...</span>
               <Loader2 size={20} className="animate-spin" />
             </>
           ) : status === 'success' ? (
-            <span>已发送</span>
+            <span>Sent</span>
           ) : (
             <>
-              <span>立即发送消息</span>
+              <span>Send Message Now</span>
               <Send size={20} />
             </>
           )}

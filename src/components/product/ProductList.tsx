@@ -9,33 +9,33 @@ import styles from '@/styles/Pages.module.css';
 export const ProductList = () => {
   const products = [
     {
-      category: '生物材料',
+      category: 'Biomaterials',
       title: 'Hairey-Resin Gen 4',
-      desc: '专为数字化义齿设计的第四代光敏树脂，具有卓越的生物相容性和硬度。',
+      desc: 'Fourth-generation photosensitive resin designed for digital dentures, featuring excellent biocompatibility and hardness.',
       icon: Layers,
       image: 'https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?q=80&w=2070&auto=format&fit=crop',
       colors: { bg: '#ecfdf5', text: '#059669' }
     },
     {
-      category: '硬件设备',
+      category: 'Hardware',
       title: 'PrecisionScan X1',
-      desc: '微米级精度的口内扫描仪，实现瞬时 3D 建模，无缝对接云端设计平台。',
+      desc: 'Micron-level precision intraoral scanner enabling instant 3D modeling and seamless cloud design platform integration.',
       icon: Microscope,
       image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop',
       colors: { bg: '#eff6ff', text: '#2563eb' }
     },
     {
-      category: '软件系统',
+      category: 'Software',
       title: 'HaireyOS Cloud',
-      desc: 'AI 辅助修复设计系统，将设计时间从几小时缩短至几分钟。',
+      desc: 'AI-assisted restoration design system reducing design time from hours to minutes.',
       icon: Activity,
       image: 'https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop',
       colors: { bg: '#faf5ff', text: '#9333ea' }
     },
     {
-      category: '铣削加工',
+      category: 'Milling',
       title: 'AuraMill 5-Axis',
-      desc: '高精度五轴联动铣削中心，支持全锆、瓷贴面等多材料加工。',
+      desc: 'High-precision 5-axis milling center supporting multi-material processing including full zirconia and veneers.',
       icon: Cog,
       image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop',
       colors: { bg: '#fffbeb', text: '#d97706' }
@@ -77,7 +77,7 @@ export const ProductList = () => {
                   <p className={styles.cardDesc} style={{ marginBottom: '2rem' }}>{item.desc}</p>
                 </div>
                 <button style={{ display: 'flex', alignItems: 'center', fontWeight: 700, color: 'hsl(var(--secondary))', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-                  查看技术参数 <ArrowRight size={20} style={{ marginLeft: '0.5rem', color: 'hsl(var(--primary))' }} />
+                  View Specs <ArrowRight size={20} style={{ marginLeft: '0.5rem', color: 'hsl(var(--primary))' }} />
                 </button>
               </div>
             </motion.div>

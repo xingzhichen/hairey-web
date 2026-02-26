@@ -14,9 +14,9 @@ export const ProductHeader = () => {
           animate={{ opacity: 1, y: 0 }}
           style={{ maxWidth: '48rem' }}
         >
-          <h1 className={styles.heroTitleLight}>产品中心</h1>
+          <h1 className={styles.heroTitleLight}>Product Center</h1>
           <p className={styles.heroSubtitleLight} style={{ marginLeft: 0 }}>
-            我们提供覆盖从诊断、设计到生产的全链路数字化牙科产品。每一件产品都经过严格的临床验证，旨在为牙科医生提供最高效的工具。
+            We provide full-link digital dental products covering diagnosis, design, and production. Every product is rigorously clinically verified to provide dentists with the most efficient tools.
           </p>
         </motion.div>
       </div>
