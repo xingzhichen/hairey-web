@@ -38,6 +38,40 @@
   --glass-border: rgba(255, 255, 255, 0.4);
 }
 
+/* Dark Mode */
+.dark {
+  --background: 215 28% 17%; /* Dark blue-grey background */
+  --foreground: 210 40% 98%; /* Light text */
+
+  --card: 215 28% 20%;
+  --card-foreground: 210 40% 98%;
+
+  --popover: 215 28% 20%;
+  --popover-foreground: 210 40% 98%;
+
+  --primary: 200 90% 50%; /* Brighter blue for dark mode */
+  --primary-foreground: 215 28% 17%;
+
+  --secondary: 200 100% 25%;
+  --secondary-foreground: 210 40% 98%;
+
+  --accent: 35 90% 65%; /* Brighter accent for dark mode */
+  --accent-foreground: 215 28% 17%;
+
+  --muted: 215 28% 25%;
+  --muted-foreground: 215 16% 67%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+
+  --border: 215 28% 30%;
+  --input: 215 28% 30%;
+  --ring: 200 90% 50%;
+
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+}
+
 * {
   border-color: hsl(var(--border));
   box-sizing: border-box;

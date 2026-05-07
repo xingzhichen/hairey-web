@@ -3,13 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Sun, Moon } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -19,6 +20,14 @@ export const Header = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -56,6 +65,13 @@ export const Header = () => {
               </Link>
             ))}
             <div className={styles.actionGroup}>
+              <button
+                className={styles.themeToggle}
+                onClick={() => setIsDark(!isDark)}
+                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
               <Link 
                 href="/contact" 
                 className={styles.ctaBtn}
@@ -99,6 +115,14 @@ export const Header = () => {
                   {link.name}
                 </Link>
               ))}
+              <button
+                className={styles.mobileThemeToggle}
+                onClick={() => setIsDark(!isDark)}
+                aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              >
+                {isDark ? <Sun size={20} /> : <Moon size={20} />}
+                <span>{isDark ? 'Light Mode' : 'Dark Mode'}</span>
+              </button>
               <Link 
                 href="/contact" 
                 onClick={() => setIsOpen(false)}
