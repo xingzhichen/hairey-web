@@ -60,18 +60,13 @@ export const CTA = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.4, duration: 0.8 }}
+              transition={{ delay: 0.5, duration: 0.8 }}
               animate={{ 
                 textShadow: [
                   "0 0 10px hsl(var(--primary) / 0.5)",
                   "0 0 20px hsl(var(--primary) / 0.8)",
                   "0 0 10px hsl(var(--primary) / 0.5)"
                 ]
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                repeatType: "reverse"
               }}
             >
               Dental Lab
