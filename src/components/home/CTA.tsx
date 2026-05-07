@@ -68,11 +68,6 @@ export const CTA = () => {
                   "0 0 10px hsl(var(--primary) / 0.5)"
                 ]
               }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity,
-                repeatType: "reverse"
-              }}
             >
               Dental Lab
             </motion.span> Journey
