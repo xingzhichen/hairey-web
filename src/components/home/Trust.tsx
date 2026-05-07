@@ -40,16 +40,47 @@ export const Trust = () => {
             <motion.div 
               key={idx}
               variants={itemVariants}
+              whileHover={{ 
+                y: -10, 
+                scale: 1.02,
+                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+              }}
               className={styles.card}
             >
-              <div className={styles.iconBox} style={{ color: item.color }}>
+              <motion.div 
+                className={styles.iconBox}
+                style={{ color: item.color }}
+                whileHover={{ 
+                  scale: 1.2, 
+                  rotate: 5,
+                  backgroundColor: item.color,
+                  color: 'white'
+                }}
+                transition={{ duration: 0.3 }}
+              >
                 <item.icon size={32} />
-              </div>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardDesc}>{item.desc}</p>
-              <div className={styles.cardLink}>
+              </motion.div>
+              <motion.h3 
+                className={styles.cardTitle}
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.3 }}
+              >
+                {item.title}
+              </motion.h3>
+              <motion.p 
+                className={styles.cardDesc}
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                {item.desc}
+              </motion.p>
+              <motion.div 
+                className={styles.cardLink}
+                whileHover={{ x: 5 }}
+                transition={{ duration: 0.3 }}
+              >
                 Learn More <ChevronRight size={16} />
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

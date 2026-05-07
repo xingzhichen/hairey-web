@@ -1,7 +1,7 @@
 .pageContainer {
   padding-top: 6rem;
   min-height: 100vh;
-  background-color: white;
+  background-color: hsl(var(--background));
 }
 
 .container {
@@ -22,7 +22,7 @@
 
 .heroSectionLight {
   padding: 6rem 0;
-  background-color: #f8fafc;
+  background-color: hsl(var(--muted));
   position: relative;
   overflow: hidden;
 }
@@ -77,7 +77,7 @@
 
 .heroSubtitleLight {
   font-size: 1.25rem;
-  color: #64748b;
+  color: hsl(var(--muted-foreground));
   max-width: 48rem;
   margin: 0 auto;
   line-height: 1.6;
@@ -89,7 +89,7 @@
 }
 
 .sectionLight {
-  background-color: #f8fafc; /* slate-50 */
+  background-color: hsl(var(--muted));
 }
 
 .sectionTitle {
@@ -101,7 +101,7 @@
 
 .sectionDesc {
   font-size: 1.125rem;
-  color: #475569; /* slate-600 */
+  color: hsl(var(--muted-foreground));
   line-height: 1.6;
 }
 
@@ -157,10 +157,10 @@
 
 /* Cards & Items */
 .card {
-  background-color: white;
+  background-color: hsl(var(--card));
   padding: 2.5rem;
   border-radius: 1.5rem;
-  border: 1px solid #f1f5f9; /* slate-100 */
+  border: 1px solid hsl(var(--border));
   transition: all 0.3s;
   cursor: pointer;
 }
@@ -173,7 +173,7 @@
 .statCard {
   padding: 1.5rem;
   border-radius: 1rem;
-  background-color: #f8fafc;
+  background-color: hsl(var(--muted));
 }
 
 .statValue {
@@ -187,7 +187,7 @@
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #64748b;
+  color: hsl(var(--muted-foreground));
 }
 
 .iconBox {
@@ -211,7 +211,7 @@
 }
 
 .cardDesc {
-  color: #64748b; /* slate-500 */
+  color: hsl(var(--muted-foreground));
   line-height: 1.6;
 }
 
@@ -225,7 +225,7 @@
 }
 
 .textSlate {
-  color: #64748b;
+  color: hsl(var(--muted-foreground));
 }
 
 /* Images */
@@ -269,8 +269,8 @@
 
 .input {
   width: 100%;
-  background-color: #f8fafc;
-  border: none;
+  background-color: hsl(var(--muted));
+  border: 1px solid hsl(var(--border));
   border-radius: 1rem;
   padding: 1rem 1.5rem;
   transition: box-shadow 0.3s;
@@ -334,8 +334,8 @@
 .searchInput {
   width: 100%;
   padding: 0.625rem 1rem 0.625rem 2.5rem;
-  background-color: white;
-  border: 1px solid #e2e8f0;
+  background-color: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
   border-radius: 0.75rem;
   font-size: 0.875rem;
   outline: none;
@@ -351,13 +351,13 @@
   position: absolute;
   left: 0.75rem;
   top: 0.75rem;
-  color: #94a3b8;
+  color: hsl(var(--muted-foreground));
 }
 
 .navSectionTitle {
   font-size: 0.75rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: hsl(var(--muted-foreground));
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 1rem;
@@ -377,7 +377,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  color: #475569;
+  color: hsl(var(--muted-foreground));
 }
 
 .navButton:hover {
@@ -396,28 +396,28 @@
 
 .docsContent {
   flex-grow: 1;
-  background-color: white;
+  background-color: hsl(var(--card));
   border-radius: 1.5rem;
   padding: 2rem;
-  border: 1px solid #f1f5f9;
+  border: 1px solid hsl(var(--border));
 }
 
 .prose h1 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; color: hsl(var(--secondary)); }
 .prose h2 { font-size: 1.5rem; font-weight: 700; margin-top: 2rem; margin-bottom: 1rem; color: hsl(var(--secondary)); }
-.prose p { margin-bottom: 1rem; line-height: 1.7; color: #475569; }
-.prose ul { margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc; color: #475569; }
+.prose p { margin-bottom: 1rem; line-height: 1.7; color: hsl(var(--muted-foreground)); }
+.prose ul { margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: disc; color: hsl(var(--muted-foreground)); }
 .prose li { margin-bottom: 0.5rem; }
-.prose pre { background: #1e293b; color: #e2e8f0; padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; }
-.prose code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.875rem; color: #0f172a; }
+.prose pre { background: hsl(var(--muted)); color: hsl(var(--foreground)); padding: 1rem; border-radius: 0.5rem; overflow-x: auto; margin-bottom: 1.5rem; }
+.prose code { background: hsl(var(--muted)); padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-size: 0.875rem; color: hsl(var(--foreground)); }
 
 /* Product Page Specific */
 .productCard {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: hsl(var(--card));
   border-radius: 2.5rem;
   overflow: hidden;
-  border: 1px solid #f1f5f9;
+  border: 1px solid hsl(var(--border));
   transition: all 0.5s;
   cursor: pointer;
 }
@@ -586,17 +586,17 @@
 .placeholderImageContainer {
   width: 100%;
   height: 25rem;
-  background-color: #f1f5f9; /* slate-100 */
+  background-color: hsl(var(--muted));
   border-radius: 1.5rem;
   margin-bottom: 4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed #cbd5e1;
+  border: 2px dashed hsl(var(--border));
 }
 
 .placeholderImage {
-  color: #94a3b8;
+  color: hsl(var(--muted-foreground));
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -633,7 +633,7 @@
 .introText {
   text-align: justify;
   font-size: 1.125rem;
-  color: #475569; /* slate-600 */
+  color: hsl(var(--muted-foreground));
   line-height: 2;
   letter-spacing: 0.01em;
 }

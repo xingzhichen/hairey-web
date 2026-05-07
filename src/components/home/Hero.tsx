@@ -13,7 +13,13 @@ export const Hero = () => {
 
   return (
     <section className={styles.heroSection}>
-      <motion.div style={{ y: yHero }} className={styles.heroBackground}>
+      <motion.div 
+        style={{ y: yHero }} 
+        className={styles.heroBackground}
+        initial={{ scale: 1.05 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeOut" }}
+      >
         <div className={styles.heroOverlay} />
         <Image 
           src="/images/new-banner.png" 
@@ -27,15 +33,15 @@ export const Hero = () => {
       
       <div className={styles.container}>
         <motion.div 
-          initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: "circOut" }}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "circOut" }}
           className={styles.heroContent}
         >
           <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3, duration: 0.6 }}
             className={styles.badge}
           >
             <span className={styles.badgeDotContainer}>
@@ -44,14 +50,36 @@ export const Hero = () => {
             </span>
             <span>Next-Gen Dental Biotechnology</span>
           </motion.div>
-          <h1 className={styles.heroTitle}>
+          <motion.h1 
+            className={styles.heroTitle}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 0.8 }}
+          >
             Stable Performance <br />
-            <span className="text-gradient">Predictable Results</span>
-          </h1>
-          <p className={styles.heroDescription}>
+            <motion.span 
+              className="text-gradient"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.7, duration: 0.8 }}
+            >
+              Predictable Results
+            </motion.span>
+          </motion.h1>
+          <motion.p 
+            className={styles.heroDescription}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.9, duration: 0.8 }}
+          >
             Complete CAD/CAM material solutions engineered to provide dental labs with consistent shades, predictable outcomes, and dependable long-term performance.
-          </p>
-          <div className={styles.buttonGroup}>
+          </motion.p>
+          <motion.div 
+            className={styles.buttonGroup}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 1.1, duration: 0.8 }}
+          >
             <Link 
               href="/contact" 
               className={styles.primaryButton}
@@ -64,13 +92,37 @@ export const Hero = () => {
             >
               Know more
             </Link>
-          </div>
+          </motion.div>
         </motion.div>
       </div>
 
       {/* Floating Decorative Elements */}
-      <div className={styles.floatingBlob1} />
-      <div className={styles.floatingBlob2} />
+      <motion.div 
+        className={styles.floatingBlob1}
+        animate={{ 
+          y: [0, -15, 0],
+          scale: [1, 1.05, 1],
+        }}
+        transition={{ 
+          duration: 8, 
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      />
+      <motion.div 
+        className={styles.floatingBlob2}
+        animate={{ 
+          y: [0, 15, 0],
+          scale: [1, 0.95, 1],
+        }}
+        transition={{ 
+          duration: 10, 
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+      />
     </section>
   );
 };
