@@ -47,7 +47,7 @@
 .desktopNav {
   display: none;
   align-items: center;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -76,9 +76,48 @@
 .actionGroup {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   border-left: 1px solid hsl(var(--secondary) / 0.1); /* slate-200 equivalentish */
-  padding-left: 2.5rem;
+  padding-left: 1.5rem;
+}
+
+.searchBox {
+  position: relative;
+  display: none;
+  align-items: center;
+  width: min(22vw, 18rem);
+}
+
+@media (min-width: 1180px) {
+  .searchBox {
+    display: flex;
+  }
+}
+
+.searchBox span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+.searchBox input {
+  width: 100%;
+  height: 2.8rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.78);
+  color: hsl(var(--foreground));
+  padding: 0 2.6rem 0 1.15rem;
+  outline: none;
+  font: inherit;
+}
+
+.searchBox svg {
+  position: absolute;
+  right: 1rem;
+  color: hsl(var(--muted-foreground));
 }
 
 .themeToggle {
@@ -118,7 +157,7 @@
 .ctaBtn {
   background-color: hsl(var(--primary));
   color: white;
-  padding: 0.625rem 1.5rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 700;

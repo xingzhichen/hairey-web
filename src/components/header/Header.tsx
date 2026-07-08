@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import { Menu, X, Sun, Moon, Search } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './Header.module.css';
 
@@ -33,7 +33,7 @@ export const Header = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Product', path: '/product' },
+    { name: 'PRODUCTS', path: '/product' },
     { name: 'Contact Us', path: '/contact' },
   ];
 
@@ -61,13 +61,18 @@ export const Header = () => {
                 key={link.path}
                 href={link.path}
                 className={`${styles.navLink} ${
-                  pathname === link.path ? styles.activeLink : ''
+                  pathname === link.path || (link.path !== '/' && pathname.startsWith(`${link.path}/`)) ? styles.activeLink : ''
                 }`}
               >
                 {link.name}
               </Link>
             ))}
             <div className={styles.actionGroup}>
+              <label className={styles.searchBox}>
+                <span>Search products</span>
+                <input type="search" placeholder="Search products..." />
+                <Search size={18} />
+              </label>
               <button
                 className={styles.themeToggle}
                 onClick={() => setIsDark(!isDark)}
@@ -79,7 +84,7 @@ export const Header = () => {
                 href="/contact" 
                 className={styles.ctaBtn}
               >
-                Get Quote
+                Request Quote
               </Link>
             </div>
           </div>
@@ -112,7 +117,7 @@ export const Header = () => {
                   href={link.path}
                   onClick={() => setIsOpen(false)}
                   className={`${styles.mobileLink} ${
-                    pathname === link.path ? styles.mobileLinkActive : ''
+                    pathname === link.path || (link.path !== '/' && pathname.startsWith(`${link.path}/`)) ? styles.mobileLinkActive : ''
                   }`}
                 >
                   {link.name}
