@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, MapPin, Facebook, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
 import styles from "./Footer.module.css";
@@ -23,14 +24,14 @@ export const Footer = () => {
       <div className={styles.container}>
         <div className={styles.grid}>
           <div className={styles.column}>
-            <Link href="/" className={styles.logoLink}>
-              <div className={styles.logoBox}>
-                <span className={styles.logoText}>H</span>
-              </div>
-              <div>
-                <span className={styles.brandText}>HAIREY</span>
-                <p className={styles.brandSubtext}>Digital Dental Materials</p>
-              </div>
+            <Link href="/" className={styles.logoLink} aria-label="Hairey home">
+              <Image
+                src="/images/logo_footer.png"
+                alt="Hairey"
+                width={650}
+                height={199}
+                className={styles.logoImage}
+              />
             </Link>
             <p className={styles.description}>
               Empowering dental professionals worldwide with precision biomaterials and dependable digital workflows.
