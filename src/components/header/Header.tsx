@@ -79,9 +79,14 @@ export const Header = () => {
 
             <div className={styles.actionGroup}>
               <label className={styles.searchBox}>
-                <span>Search products</span>
-                <input type="search" placeholder="Search products..." />
-                <Search size={18} />
+                <span className={styles.srOnly}>Search products</span>
+                <Search className={styles.searchIcon} size={18} aria-hidden="true" />
+                <input
+                  className={styles.searchInput}
+                  type="search"
+                  placeholder="Search products"
+                  aria-label="Search products"
+                />
               </label>
               <button
                 className={styles.themeToggle}

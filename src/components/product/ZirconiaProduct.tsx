@@ -78,9 +78,13 @@ export const ZirconiaProduct = () => {
                 <Link href="/contact" className={styles.primaryAction}>
                   Request Sample <ArrowRight size={18} />
                 </Link>
-                <button type="button" className={styles.secondaryAction}>
+                <a
+                  href="/downloads/Hairey-Product-Brochure-2026.pdf"
+                  download
+                  className={styles.secondaryAction}
+                >
                   Download Brochure <Download size={17} />
-                </button>
+                </a>
               </div>
               <div className={styles.heroTrustRow}>
                 <span><ShieldCheck size={18} /> Trusted by Professionals</span>
@@ -103,58 +107,6 @@ export const ZirconiaProduct = () => {
                 sizes="(max-width: 900px) 100vw, 44vw"
               />
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      <section className={styles.productInquirySection}>
-        <div className={styles.container}>
-          <div className={styles.productFamilyHeader}>
-            <div>
-              <span className={styles.sectionKicker}>Product Family</span>
-              <h2>Zirconia Products</h2>
-            </div>
-            <Link href="/product/zirconia/products">View all products <ArrowRight size={16} /></Link>
-          </div>
-          <div className={styles.zirconiaCarouselWrap}>
-            <button
-              type="button"
-              className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}
-              onClick={() => scrollProducts('prev')}
-              aria-label="Previous zirconia products"
-            >
-              <ArrowLeft size={20} />
-            </button>
-            <div className={styles.zirconiaProductCarousel} ref={carouselRef}>
-              {zirconiaProducts.map((item) => (
-                <article key={item.slug} className={styles.zirconiaSkuCard} data-product-card>
-                  <div className={styles.zirconiaSkuImage}>
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="(max-width: 640px) 82vw, (max-width: 1100px) 34vw, 18vw"
-                    />
-                  </div>
-                  <h3>{item.name}</h3>
-                  <p className={styles.zirconiaSkuTag}>{item.tag}</p>
-                  <ul>
-                    {item.cardSpecs.map((spec) => (
-                      <li key={spec}>{spec}</li>
-                    ))}
-                  </ul>
-                  <Link href={`/product/zirconia/${item.slug}`}>View Details <ArrowRight size={16} /></Link>
-                </article>
-              ))}
-            </div>
-            <button
-              type="button"
-              className={`${styles.carouselArrow} ${styles.carouselArrowRight}`}
-              onClick={() => scrollProducts('next')}
-              aria-label="Next zirconia products"
-            >
-              <ArrowRight size={20} />
-            </button>
           </div>
         </div>
       </section>
@@ -296,6 +248,58 @@ export const ZirconiaProduct = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className={styles.productInquirySection}>
+        <div className={styles.container}>
+          <div className={styles.productFamilyHeader}>
+            <div>
+              <span className={styles.sectionKicker}>Product Family</span>
+              <h2>Zirconia Products</h2>
+            </div>
+            <Link href="/product/zirconia/products">View all products <ArrowRight size={16} /></Link>
+          </div>
+          <div className={styles.zirconiaCarouselWrap}>
+            <button
+              type="button"
+              className={`${styles.carouselArrow} ${styles.carouselArrowLeft}`}
+              onClick={() => scrollProducts('prev')}
+              aria-label="Previous zirconia products"
+            >
+              <ArrowLeft size={20} />
+            </button>
+            <div className={styles.zirconiaProductCarousel} ref={carouselRef}>
+              {zirconiaProducts.map((item) => (
+                <article key={item.slug} className={styles.zirconiaSkuCard} data-product-card>
+                  <div className={styles.zirconiaSkuImage}>
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="(max-width: 640px) 82vw, (max-width: 1100px) 34vw, 18vw"
+                    />
+                  </div>
+                  <h3>{item.name}</h3>
+                  <p className={styles.zirconiaSkuTag}>{item.tag}</p>
+                  <ul>
+                    {item.cardSpecs.map((spec) => (
+                      <li key={spec}>{spec}</li>
+                    ))}
+                  </ul>
+                  <Link href={`/product/zirconia/${item.slug}`}>View Details <ArrowRight size={16} /></Link>
+                </article>
+              ))}
+            </div>
+            <button
+              type="button"
+              className={`${styles.carouselArrow} ${styles.carouselArrowRight}`}
+              onClick={() => scrollProducts('next')}
+              aria-label="Next zirconia products"
+            >
+              <ArrowRight size={20} />
+            </button>
           </div>
         </div>
       </section>
