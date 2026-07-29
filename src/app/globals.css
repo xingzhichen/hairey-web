@@ -1,7 +1,6 @@
 :root {
-  /* Pale Blue Theme */
-  --background: 200 50% 98%; /* Very light blue */
-  --foreground: 215 25% 27%; /* Dark blue-grey text */
+  --background: 200 50% 98%;
+  --foreground: 215 25% 27%;
 
   --card: 0 0% 100%;
   --card-foreground: 215 25% 27%;
@@ -9,15 +8,12 @@
   --popover: 0 0% 100%;
   --popover-foreground: 215 25% 27%;
 
-  /* Primary: Ocean Blue */
-  --primary: 200 90% 35%; 
+  --primary: 200 90% 35%;
   --primary-foreground: 210 40% 98%;
 
-  /* Secondary: Deep Navy */
-  --secondary: 200 100% 15%; 
+  --secondary: 200 100% 15%;
   --secondary-foreground: 210 40% 98%;
 
-  /* Accent: Gold/Orange for contrast */
   --accent: 35 90% 55%;
   --accent-foreground: 210 40% 98%;
 
@@ -38,10 +34,9 @@
   --glass-border: rgba(255, 255, 255, 0.4);
 }
 
-/* Dark Mode */
 .dark {
-  --background: 215 28% 17%; /* Dark blue-grey background */
-  --foreground: 210 40% 98%; /* Light text */
+  --background: 215 28% 17%;
+  --foreground: 210 40% 98%;
 
   --card: 215 28% 20%;
   --card-foreground: 210 40% 98%;
@@ -49,13 +44,13 @@
   --popover: 215 28% 20%;
   --popover-foreground: 210 40% 98%;
 
-  --primary: 200 90% 50%; /* Brighter blue for dark mode */
+  --primary: 200 90% 50%;
   --primary-foreground: 215 28% 17%;
 
   --secondary: 200 100% 25%;
   --secondary-foreground: 210 40% 98%;
 
-  --accent: 35 90% 65%; /* Brighter accent for dark mode */
+  --accent: 35 90% 65%;
   --accent-foreground: 215 28% 17%;
 
   --muted: 215 28% 25%;
@@ -77,10 +72,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  background-color: hsl(var(--background));
+  background:
+    radial-gradient(circle at top left, hsl(var(--primary) / 0.06), transparent 20%),
+    linear-gradient(180deg, hsl(var(--background)), hsl(0 0% 100%));
   color: hsl(var(--foreground));
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
   margin: 0;
   padding: 0;
   -webkit-font-smoothing: antialiased;
@@ -93,7 +94,6 @@ main {
   padding-top: 5rem;
 }
 
-/* Global Utilities */
 .glass-effect {
   background: var(--glass-bg);
   backdrop-filter: blur(12px);
@@ -119,17 +119,31 @@ main {
   100% { transform: translateY(0px); }
 }
 
-/* Base resets */
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p {
   margin: 0;
 }
+
 a {
   text-decoration: none;
   color: inherit;
 }
+
 button {
   cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: hsl(var(--primary) / 0.18);
+  color: hsl(var(--secondary));
 }

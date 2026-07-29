@@ -5,80 +5,110 @@ import { Activity, Shield, Zap, Microscope, ChevronRight } from 'lucide-react';
 import { motion, Variants } from 'framer-motion';
 import styles from './HomePage.module.css';
 
+const trustItems = [
+  {
+    icon: Microscope,
+    title: 'Powerful R&D',
+    desc: 'More than a decade of technical focus helps translate material science into dependable daily performance.',
+    color: 'hsl(var(--primary))',
+  },
+  {
+    icon: Zap,
+    title: 'Stable Supply',
+    desc: 'Structured production and inventory planning support consistent quality and timely global fulfillment.',
+    color: 'hsl(var(--accent))',
+  },
+  {
+    icon: Shield,
+    title: 'Global Standards',
+    desc: 'Quality control is designed to align with international expectations for modern dental material delivery.',
+    color: 'hsl(217, 91%, 60%)',
+  },
+  {
+    icon: Activity,
+    title: 'Workflow Optimized',
+    desc: 'Each product line is tuned for smoother milling, finishing, and shade management in real lab scenarios.',
+    color: 'hsl(158, 64%, 52%)',
+  },
+];
+
+const trustStats = [
+  { value: '4', label: 'Core categories' },
+  { value: '100%', label: 'Digital workflow focus' },
+  { value: 'Global', label: 'Distributor support' },
+];
+
 export const Trust = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2
-      }
-    }
+        staggerChildren: 0.2,
+      },
+    },
   };
 
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
   };
 
   return (
     <section className={styles.trustSection}>
       <div className={styles.container}>
-        <motion.div 
+        <div className={styles.trustIntro}>
+          <div className={styles.sectionHeadingCompact}>
+            <span className={styles.sectionEyebrow}>Trust signals</span>
+            <h2 className={styles.sectionTitle}>Built to feel reliable at every stage of the workflow</h2>
+            <p className={styles.sectionDesc}>
+              We focus on the details labs care about most: material stability, delivery confidence, and repeatable restorative outcomes.
+            </p>
+          </div>
+          <div className={styles.statsStrip}>
+            {trustStats.map((item) => (
+              <div key={item.label} className={styles.statsItem}>
+                <strong>{item.value}</strong>
+                <span>{item.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, margin: '-100px' }}
           className={styles.grid}
         >
-          {[
-            { icon: Microscope, title: 'Powerful R&D', desc: 'Over a decade of innovation ensures industry-leading product performance.', color: 'hsl(var(--primary))' },
-            { icon: Zap, title: 'Stable Supply', desc: 'Reliable production and inventory for consistent quality and timely delivery.', color: 'hsl(var(--accent))' },
-            { icon: Shield, title: 'Global Standards', desc: 'Strict quality control aligned with international dental regulations.', color: 'hsl(217, 91%, 60%)' },
-            { icon: Activity, title: 'Clinically Optimized', desc: 'Refined based on lab workflow and real clinical feedback.', color: 'hsl(158, 64%, 52%)' },
-          ].map((item, idx) => (
-            <motion.div 
-              key={idx}
+          {trustItems.map((item) => (
+            <motion.div
+              key={item.title}
               variants={itemVariants}
-              whileHover={{ 
-                y: -10, 
+              whileHover={{
+                y: -10,
                 scale: 1.02,
-                boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)"
+                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
               }}
               className={styles.card}
             >
-              <motion.div 
+              <motion.div
                 className={styles.iconBox}
                 style={{ color: item.color }}
-                whileHover={{ 
-                  scale: 1.2, 
+                whileHover={{
+                  scale: 1.15,
                   rotate: 5,
                   backgroundColor: item.color,
-                  color: 'white'
+                  color: 'white',
                 }}
                 transition={{ duration: 0.3 }}
               >
                 <item.icon size={32} />
               </motion.div>
-              <motion.h3 
-                className={styles.cardTitle}
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                {item.title}
-              </motion.h3>
-              <motion.p 
-                className={styles.cardDesc}
-                whileHover={{ scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
-                {item.desc}
-              </motion.p>
-              <motion.div 
-                className={styles.cardLink}
-                whileHover={{ x: 5 }}
-                transition={{ duration: 0.3 }}
-              >
+              <motion.h3 className={styles.cardTitle}>{item.title}</motion.h3>
+              <motion.p className={styles.cardDesc}>{item.desc}</motion.p>
+              <motion.div className={styles.cardLink} whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
                 Learn More <ChevronRight size={16} />
               </motion.div>
             </motion.div>

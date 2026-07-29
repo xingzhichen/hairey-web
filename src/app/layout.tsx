@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Header } from "@/components/header/Header";
 import { Footer } from "@/components/footer/Footer";
 import { StructuredData } from "@/components/StructuredData";
@@ -83,6 +85,8 @@ export default function RootLayout({
         <StructuredData />
         <WhatsAppButton />
         <Toaster position="top-right" richColors />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
