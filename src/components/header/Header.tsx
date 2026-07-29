@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sun, Moon, ArrowRight } from "lucide-react";
+import { Menu, X, Sun, Moon, ArrowRight, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
