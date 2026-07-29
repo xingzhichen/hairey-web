@@ -71,9 +71,13 @@ export const CTA = () => {
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05, rotate: -1 }} transition={{ duration: 0.3 }}>
-              <Link href="/product" className={styles.ctaSecondary}>
+              <a
+                href="/downloads/Hairey-Product-Brochure-2026.pdf"
+                download
+                className={styles.ctaSecondary}
+              >
                 Download Brochure <Download size={18} />
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </motion.div>
