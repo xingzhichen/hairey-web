@@ -6,29 +6,8 @@ import { ProductList } from '../product/ProductList';
 export const Product = () => {
   return (
     <div className={styles.pageContainer}>
-      {/* Page Header */}
       <ProductHeader />
-
-      {/* Product List */}
       <ProductList />
-
-      {/* Innovation Banner */}
-      <section style={{ paddingBottom: '8rem' }}>
-        <div className={styles.container}>
-          <div style={{ background: 'var(--gradient-tech)', borderRadius: '3rem', padding: '4rem', color: 'white', position: 'relative', overflow: 'hidden' }}>
-            <div style={{ position: 'absolute', top: 0, right: 0, width: '24rem', height: '24rem', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '9999px', filter: 'blur(64px)', transform: 'translate(5rem, -5rem)' }} />
-            <div style={{ position: 'relative', zIndex: 10, maxWidth: '42rem' }}>
-              <h2 style={{ fontSize: '2.5rem', fontWeight: 900, marginBottom: '2rem' }}>Looking for Custom Solutions?</h2>
-              <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.8)', marginBottom: '3rem' }}>
-                Our OEM/ODM team can tailor high-performance materials and software interfaces to your specific clinical needs.
-              </p>
-              <button style={{ backgroundColor: 'white', color: 'hsl(var(--primary))', padding: '1.25rem 2.5rem', borderRadius: '9999px', fontWeight: 900, fontSize: '1.125rem', border: 'none', cursor: 'pointer' }}>
-                Partner With Us
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
