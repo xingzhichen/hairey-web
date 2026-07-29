@@ -1,51 +1,70 @@
 'use client';
 
 import React from 'react';
-import { Microscope, Activity, Cog, Layers, ArrowRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from '@/styles/Pages.module.css';
 
 export const ProductList = () => {
   const products = [
     {
       category: 'Biomaterials',
-      title: 'Hairey-Resin Gen 4',
-      desc: 'Fourth-generation photosensitive resin designed for digital dentures, featuring excellent biocompatibility and hardness.',
-      icon: Layers,
-      image: 'https://images.unsplash.com/photo-1583912267550-d44d7a125e7e?q=80&w=2070&auto=format&fit=crop',
-      colors: { bg: '#ecfdf5', text: '#059669' }
+      title: 'ZircoFuse™ Zirconia',
+      desc: 'Hairey’s exclusive ZircoFuse™ Technology fuses proprietary 4Y-TZP and 5Y-TZP zirconia powders via colloidal processing, … ',
+      image: '/images/zirconia.png',
+      href: '/product/zirconia',
+      featured: true,
+      imageFit: 'cover' as const,
+      imagePosition: 'center'
     },
     {
-      category: 'Hardware',
-      title: 'PrecisionScan X1',
-      desc: 'Micron-level precision intraoral scanner enabling instant 3D modeling and seamless cloud design platform integration.',
-      icon: Microscope,
-      image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=2070&auto=format&fit=crop',
-      colors: { bg: '#eff6ff', text: '#2563eb' }
+      category: 'Biomaterials',
+      title: 'PMMA',
+      desc: 'Hairey multi-color resin adopts a unique layered design, which can not only be used for the production of temporary crowns and bridges, but also can be used to carve…',
+      image: '/images/pmma.png',
+      imageFit: 'contain' as const,
+      imagePosition: 'center'
     },
     {
-      category: 'Software',
-      title: 'HaireyOS Cloud',
-      desc: 'AI-assisted restoration design system reducing design time from hours to minutes.',
-      icon: Activity,
-      image: 'https://images.unsplash.com/photo-1551288049-bbbda5366392?q=80&w=2070&auto=format&fit=crop',
-      colors: { bg: '#faf5ff', text: '#9333ea' }
+      category: 'Biomaterials',
+      title: 'Press',
+      desc: 'Hairey Press boasts superior translucency, precise color reproduction, high natural mimicry, excellent biocompatibility and favorable bondability…',
+      image: '/images/Press.png',
+      imageFit: 'contain' as const,
+      imagePosition: 'center'
     },
     {
-      category: 'Milling',
-      title: 'AuraMill 5-Axis',
-      desc: 'High-precision 5-axis milling center supporting multi-material processing including full zirconia and veneers.',
-      icon: Cog,
-      image: 'https://images.unsplash.com/photo-1518152006812-edab29b069ac?q=80&w=2070&auto=format&fit=crop',
-      colors: { bg: '#fffbeb', text: '#d97706' }
+      category: 'Biomaterials',
+      title: 'Glass Ceramic Blocks',
+      desc: 'Hairey ceramic blocks deliver life-like translucency and precision color matching for all-ceramic restorations…',
+      image: '/images/Glass.png',
+      imageFit: 'contain' as const,
+      imagePosition: 'center'
+    },
+    {
+      category: 'Biomaterials',
+      title: 'Milling Burs',
+      desc: 'Our tungsten carbide milling burs, compatible with mainstream CAD/CAM machines or systems, are good choices for trimming zirconia, porcelain, PMMA,…',
+      image: '/images/milling-burs-top-left.png',
+      imageFit: 'contain' as const,
+      imagePosition: 'center'
     }
   ];
 
   return (
-    <section className={styles.section}>
+    <section className={styles.productSection}>
       <div className={styles.container}>
-        <div className={styles.grid2} style={{ gap: '4rem' }}>
+        <div className={styles.productIntro}>
+          <span className={styles.sectionKicker}>Biomaterials</span>
+          <h2 className={styles.sectionTitle}>Precision materials for digital dental production</h2>
+          <p className={styles.sectionDesc}>
+            From zirconia to milling burs, Hairey materials are selected for stable performance, natural aesthetics, and efficient chairside or laboratory workflows.
+          </p>
+        </div>
+
+        <div className={styles.productShowcase}>
           {products.map((item, idx) => (
             <motion.div 
               key={idx}
@@ -53,32 +72,32 @@ export const ProductList = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1 }}
-              className={styles.productCard}
+              className={`${styles.productCard} ${item.featured ? styles.productCardFeatured : ''}`}
             >
-              <div className={styles.productImage} style={{ position: 'relative', overflow: 'hidden' }}>
+              <div className={styles.productImage}>
                 <Image 
                   src={item.image} 
                   alt={item.title}
                   fill
-                  style={{ objectFit: 'cover' }}
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  style={{ objectFit: item.imageFit, objectPosition: item.imagePosition }}
+                  sizes={item.featured ? '(max-width: 1024px) 100vw, 58vw' : '(max-width: 1024px) 100vw, 36vw'}
                 />
-                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.2), transparent)' }} />
               </div>
               <div className={styles.productContent}>
                 <div>
-                  <div 
-                    className={styles.categoryTag} 
-                    style={{ backgroundColor: item.colors.bg, color: item.colors.text }}
-                  >
-                    {item.category}
-                  </div>
-                  <h3 className={styles.cardTitle} style={{ fontSize: '1.875rem', marginBottom: '1rem' }}>{item.title}</h3>
-                  <p className={styles.cardDesc} style={{ marginBottom: '2rem' }}>{item.desc}</p>
+                  <div className={styles.categoryTag}>{item.category}</div>
+                  <h3 className={styles.cardTitle}>{item.title}</h3>
+                  <p className={styles.cardDesc}>{item.desc}</p>
                 </div>
-                <button style={{ display: 'flex', alignItems: 'center', fontWeight: 700, color: 'hsl(var(--secondary))', background: 'none', border: 'none', padding: 0, cursor: 'pointer' }}>
-                  View Specs <ArrowRight size={20} style={{ marginLeft: '0.5rem', color: 'hsl(var(--primary))' }} />
-                </button>
+                {item.href ? (
+                  <Link href={item.href} className={styles.productAction}>
+                    View <ArrowRight size={18} />
+                  </Link>
+                ) : (
+                  <button className={styles.productAction}>
+                    View <ArrowRight size={18} />
+                  </button>
+                )}
               </div>
             </motion.div>
           ))}

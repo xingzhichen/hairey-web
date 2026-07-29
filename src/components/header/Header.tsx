@@ -76,6 +76,11 @@ export const Header = () => {
             </div>
 
             <div className={styles.actionGroup}>
+              <label className={styles.searchBox}>
+                <span>Search products</span>
+                <input type="search" placeholder="Search products..." />
+                <Search size={18} />
+              </label>
               <button
                 className={styles.themeToggle}
                 onClick={() => setIsDark((value) => !value)}

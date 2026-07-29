@@ -41,30 +41,12 @@
 .logoLink {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
 }
 
-.logoBox {
-  width: 2.5rem;
-  height: 2.5rem;
-  background-color: hsl(var(--primary));
-  border-radius: 0.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logoText {
-  color: white;
-  font-weight: 900;
-  font-size: 1.25rem;
-}
-
-.brandText {
-  font-size: 1.5rem;
-  font-weight: 900;
-  letter-spacing: -0.05em;
-  color: white;
+.logoImage {
+  width: 8.5rem;
+  height: auto;
+  flex-shrink: 0;
 }
 
 .description {
