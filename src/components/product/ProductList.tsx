@@ -10,7 +10,6 @@ import styles from '@/styles/Pages.module.css';
 export const ProductList = () => {
   const products = [
     {
-      category: 'Biomaterials',
       title: 'ZircoFuse™ Zirconia',
       desc: 'Hairey’s exclusive ZircoFuse™ Technology fuses proprietary 4Y-TZP and 5Y-TZP zirconia powders via colloidal processing, … ',
       image: '/images/zirconia.png',
@@ -20,34 +19,18 @@ export const ProductList = () => {
       imagePosition: 'center'
     },
     {
-      category: 'Biomaterials',
       title: 'PMMA',
       desc: 'Hairey multi-color resin adopts a unique layered design, which can not only be used for the production of temporary crowns and bridges, but also can be used to carve…',
       image: '/images/pmma.png',
+      href: '/product/pmma',
       imageFit: 'contain' as const,
       imagePosition: 'center'
     },
     {
-      category: 'Biomaterials',
       title: 'Press',
       desc: 'Hairey Press boasts superior translucency, precise color reproduction, high natural mimicry, excellent biocompatibility and favorable bondability…',
       image: '/images/Press.png',
-      imageFit: 'contain' as const,
-      imagePosition: 'center'
-    },
-    {
-      category: 'Biomaterials',
-      title: 'Glass Ceramic Blocks',
-      desc: 'Hairey ceramic blocks deliver life-like translucency and precision color matching for all-ceramic restorations…',
-      image: '/images/Glass.png',
-      imageFit: 'contain' as const,
-      imagePosition: 'center'
-    },
-    {
-      category: 'Biomaterials',
-      title: 'Milling Burs',
-      desc: 'Our tungsten carbide milling burs, compatible with mainstream CAD/CAM machines or systems, are good choices for trimming zirconia, porcelain, PMMA,…',
-      image: '/images/milling-burs-top-left.png',
+      href: '/product/press',
       imageFit: 'contain' as const,
       imagePosition: 'center'
     }
@@ -56,14 +39,6 @@ export const ProductList = () => {
   return (
     <section className={styles.productSection}>
       <div className={styles.container}>
-        <div className={styles.productIntro}>
-          <span className={styles.sectionKicker}>Biomaterials</span>
-          <h2 className={styles.sectionTitle}>Precision materials for digital dental production</h2>
-          <p className={styles.sectionDesc}>
-            From zirconia to milling burs, Hairey materials are selected for stable performance, natural aesthetics, and efficient chairside or laboratory workflows.
-          </p>
-        </div>
-
         <div className={styles.productShowcase}>
           {products.map((item, idx) => (
             <motion.div 
@@ -85,7 +60,6 @@ export const ProductList = () => {
               </div>
               <div className={styles.productContent}>
                 <div>
-                  <div className={styles.categoryTag}>{item.category}</div>
                   <h3 className={styles.cardTitle}>{item.title}</h3>
                   <p className={styles.cardDesc}>{item.desc}</p>
                 </div>

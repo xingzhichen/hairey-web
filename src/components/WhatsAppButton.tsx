@@ -2,11 +2,11 @@ import React from 'react';
 import { MessageCircle } from 'lucide-react';
 import styles from './WhatsAppButton.module.css';
 
-const WHATSAPP_NUMBER = '8615625267480'; // Replace with your actual WhatsApp number
+const WHATSAPP_NUMBER = '8613480877880';
 const WHATSAPP_MESSAGE = 'Hello! I am interested in Hairey Dental products and services.';
 
 export const WhatsAppButton = () => {
-  const whatsappUrl = `https://web.whatsapp.com/send/?phone=${WHATSAPP_NUMBER}&text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
+  const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MESSAGE)}`;
 
   return (
     <a 

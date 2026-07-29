@@ -1,175 +1,134 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
-import { Send, Loader2 } from 'lucide-react';
-import { motion } from 'framer-motion';
-import { toast } from 'sonner';
-import styles from '@/styles/Pages.module.css';
+import { FormEvent, useState } from "react";
+import { ArrowRight, Loader2 } from "lucide-react";
+import { toast } from "sonner";
+import styles from "../pages/Contact.module.css";
+
+const initialForm = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  subject: "",
+  message: "",
+};
 
 export const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    organization: '',
-    email: '',
-    category: '产品订购',
-    message: ''
-  });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
+  const [formData, setFormData] = useState(initialForm);
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus('loading');
-    setErrorMessage('');
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setStatus("loading");
 
     try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: formData.name,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
           email: formData.email,
-          subject: `${formData.category} - ${formData.organization}`,
+          subject: formData.subject,
           message: formData.message,
         }),
       });
 
       const data = await response.json();
-
       if (!response.ok) {
-        throw new Error(data.error || 'Failed to send message');
+        throw new Error(data.error || "Failed to send message");
       }
 
-      setStatus('success');
-      setFormData({
-        name: '',
-        organization: '',
-        email: '',
-        category: '产品订购',
-        message: ''
-      });
-      toast.success('Message sent successfully! We will contact you shortly.');
+      setFormData(initialForm);
+      setStatus("success");
+      toast.success("Message sent successfully! We will contact you shortly.");
     } catch (error) {
-      console.error('Error submitting form:', error);
-      setStatus('error');
-      setErrorMessage('Failed to send message. Please try again later.');
-      toast.error('Failed to send message. Please try again later.');
+      console.error("Error submitting form:", error);
+      setStatus("error");
+      toast.error("Failed to send message. Please try again later.");
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+  const updateField = (field: keyof typeof formData, value: string) => {
+    setFormData((current) => ({ ...current, [field]: value }));
+    if (status !== "idle") setStatus("idle");
   };
 
   return (
-    <motion.div 
-      initial={{ opacity: 0, x: 50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      className={styles.card}
-      style={{ padding: '3rem', borderRadius: '3rem', boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.1)' }}
-    >
-      <h3 className={styles.cardTitle} style={{ fontSize: '1.875rem', marginBottom: '2.5rem' }}>Send Us a Message</h3>
-      <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Name</label>
-            <input 
-              type="text" 
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              className={styles.input} 
-              placeholder="Your Name" 
-              required
-            />
-          </div>
-          <div className={styles.formGroup}>
-            <label className={styles.label}>Organization</label>
-            <input 
-              type="text" 
-              name="organization"
-              value={formData.organization}
-              onChange={handleChange}
-              className={styles.input} 
-              placeholder="Clinic / Hospital Name" 
-              required
-            />
-          </div>
-        </div>
-        <div className={styles.formGroup}>
-          <label className={styles.label}>Email</label>
-          <input 
-            type="email" 
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <div className={styles.formGrid}>
+        <label className={styles.field}>
+          <span>First Name *</span>
+          <input
+            name="firstName"
+            autoComplete="given-name"
+            value={formData.firstName}
+            onChange={(event) => updateField("firstName", event.target.value)}
+            required
+          />
+        </label>
+
+        <label className={styles.field}>
+          <span>Last Name *</span>
+          <input
+            name="lastName"
+            autoComplete="family-name"
+            value={formData.lastName}
+            onChange={(event) => updateField("lastName", event.target.value)}
+            required
+          />
+        </label>
+
+        <label className={styles.field}>
+          <span>Email *</span>
+          <input
+            type="email"
             name="email"
+            autoComplete="email"
             value={formData.email}
-            onChange={handleChange}
-            className={styles.input} 
-            placeholder="email@example.com" 
+            onChange={(event) => updateField("email", event.target.value)}
             required
           />
-        </div>
-        <div className={styles.formGroup}>
-          <label className={styles.label}>Inquiry Type</label>
-          <select 
-            name="category"
-            value={formData.category}
-            onChange={handleChange}
-            className={styles.input}
-          >
-            <option value="Product Order">Product Order</option>
-            <option value="Technical Support">Technical Support</option>
-            <option value="Business Partnership">Business Partnership</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-        <div className={styles.formGroup}>
-          <label className={styles.label}>Message</label>
-          <textarea 
-            rows={4} 
+        </label>
+
+        <label className={styles.field}>
+          <span>Subject</span>
+          <input
+            name="subject"
+            value={formData.subject}
+            onChange={(event) => updateField("subject", event.target.value)}
+            required
+          />
+        </label>
+
+        <label className={`${styles.field} ${styles.messageField}`}>
+          <span>Leave us a message...</span>
+          <textarea
             name="message"
+            rows={4}
             value={formData.message}
-            onChange={handleChange}
-            className={styles.input} 
-            placeholder="How can we help you?" 
+            onChange={(event) => updateField("message", event.target.value)}
             required
           />
-        </div>
+        </label>
+      </div>
 
-        {status === 'error' && (
-          <p style={{ color: 'red', fontSize: '0.875rem' }}>{errorMessage}</p>
-        )}
-        
-        {status === 'success' && (
-          <p style={{ color: 'green', fontSize: '0.875rem' }}>消息已发送，我们会尽快与您联系！</p>
-        )}
-
-        <button 
-          type="submit" 
-          className={styles.button}
-          disabled={status === 'loading' || status === 'success'}
-          style={{ opacity: status === 'loading' || status === 'success' ? 0.7 : 1 }}
-        >
-          {status === 'loading' ? (
+      <div className={styles.formFooter}>
+        <p className={styles.formStatus} role="status" aria-live="polite">
+          {status === "success" && "Thank you. Your message has been sent."}
+          {status === "error" && "Your message could not be sent. Please try again."}
+        </p>
+        <button className={styles.submitButton} type="submit" disabled={status === "loading"}>
+          {status === "loading" ? (
             <>
-              <span>Sending...</span>
-              <Loader2 size={20} className="animate-spin" />
+              Sending <Loader2 size={17} className={styles.spinner} />
             </>
-          ) : status === 'success' ? (
-            <span>Sent</span>
           ) : (
             <>
-              <span>Send Message Now</span>
-              <Send size={20} />
+              Submit <ArrowRight size={17} />
             </>
           )}
         </button>
-      </form>
-    </motion.div>
+      </div>
+    </form>
   );
 };
