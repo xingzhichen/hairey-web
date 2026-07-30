@@ -1,7 +1,4 @@
-'use client';
-
 import React from 'react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from '@/styles/Pages.module.css';
 
@@ -9,11 +6,7 @@ export const Values = () => {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-        >
+        <div>
           <h2 className={styles.sectionTitle} style={{ textAlign: 'center' }}>Our Values</h2>
           
           <div className={styles.introText} style={{ marginBottom: '3rem' }}>
@@ -36,7 +29,7 @@ export const Values = () => {
 
           <div className={styles.imageWrapper} style={{ marginTop: '2rem' }}>
              <Image
-              src={`/images/about-us/${encodeURIComponent('公司价值观.png')}`}
+              src="/images/about-us/company-values.webp"
               alt="Hairey Values"
               width={1200}
               height={400}
@@ -45,7 +38,7 @@ export const Values = () => {
               sizes="(max-width: 1200px) 100vw, 1200px"
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );

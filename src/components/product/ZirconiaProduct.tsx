@@ -4,7 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft, ArrowRight, CheckCircle2, Download, Gem, ShieldCheck, Sparkles } from 'lucide-react';
-import { motion } from 'framer-motion';
 import { zirconiaProducts } from '@/data/zirconiaProducts';
 import { ProductSupportForm } from './ProductSupportForm';
 import styles from '@/styles/Pages.module.css';
@@ -55,11 +54,7 @@ export const ZirconiaProduct = () => {
       <section className={styles.productDetailHero}>
         <div className={styles.container}>
           <div className={styles.productDetailHeroGrid}>
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              className={styles.productDetailCopy}
-            >
+            <div className={styles.productDetailCopy}>
               <span className={styles.sectionKicker}>Biomaterials</span>
               <h1 className={styles.productDetailTitle}>ZircoFuse™ Zirconia</h1>
               <div className={styles.heroValueStack}>
@@ -87,22 +82,17 @@ export const ZirconiaProduct = () => {
                 <span><Gem size={18} /> Engineered for Excellence</span>
                 <span className={styles.consistentTrust}><CheckCircle2 size={18} /> <em>Consistent<br />Results</em></span>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.1 }}
-              className={styles.productDetailVisual}
-            >
+            <div className={styles.productDetailVisual}>
               <Image
-                src="/images/Zirconia_details.png"
+                src="/images/Zirconia_details.webp"
                 alt="ZircoFuse Zirconia layered strength details"
                 fill
                 priority
                 sizes="(max-width: 900px) 100vw, 44vw"
               />
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
@@ -122,7 +112,7 @@ export const ZirconiaProduct = () => {
             </div>
             <div className={styles.performanceImage}>
               <Image
-                src="/images/Zirconia_performance.png"
+                src="/images/Zirconia_performance.webp"
                 alt="ZircoFuse zirconia performance comparison"
                 fill
                 sizes="(max-width: 900px) 100vw, 48vw"
@@ -131,13 +121,9 @@ export const ZirconiaProduct = () => {
           </div>
 
           <div className={styles.detailFeatureGrid}>
-            {featureCards.map((item, index) => (
-              <motion.div
+            {featureCards.map((item) => (
+              <div
                 key={item.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.08 }}
                 className={styles.detailFeatureCard}
               >
                 <div className={styles.detailIconBox}>
@@ -145,7 +131,7 @@ export const ZirconiaProduct = () => {
                 </div>
                 <h3>{item.title}</h3>
                 <p>{item.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>
@@ -154,12 +140,7 @@ export const ZirconiaProduct = () => {
       <section className={styles.productDetailSectionMuted}>
         <div className={styles.container}>
           <div className={styles.qualityGrid}>
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className={styles.qualityCardStrong}
-            >
+            <div className={styles.qualityCardStrong}>
               <span className={styles.sectionKicker}>Advanced Materials</span>
               <h2>Powder-level Quality Control</h2>
               <p>
@@ -168,24 +149,18 @@ export const ZirconiaProduct = () => {
               <p>
                 The fusion of raw materials and innovative colloidal technology creates stronger zirconia blocks with dependable CAD/CAM machinability.
               </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.08 }}
-              className={styles.qualityCard}
-            >
+            <div className={styles.qualityCard}>
               <div className={styles.qualityImage}>
                 <Image
-                  src="/images/zirconia_quality_control.png"
+                  src="/images/zirconia_quality_control.webp"
                   alt="Hairey zirconia powder-level quality control process"
                   fill
                   sizes="(max-width: 900px) 100vw, 34vw"
                 />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>

@@ -32,7 +32,7 @@ export const PressProduct = () => {
         <div className={`${styles.container} ${styles.heroGrid}`}>
           <div className={styles.heroVisual}>
             <Image
-              src="/images/press/hairey-press-ingots.png"
+              src="/images/press/hairey-press-ingots.webp"
               alt="Hairey Press lithium disilicate ceramic ingots"
               width={1999}
               height={1046}
@@ -81,7 +81,7 @@ export const PressProduct = () => {
           </div>
           <div className={styles.strengthGraphic}>
             <Image
-              src="/images/press/press-460mpa.png"
+              src="/images/press/press-460mpa.webp"
               alt="Hairey Press 460MPa biaxial bending strength compared with the dental ceramic standard"
               width={1031}
               height={375}
@@ -96,7 +96,7 @@ export const PressProduct = () => {
         <div className={`${styles.container} ${styles.splitGrid}`}>
           <div className={styles.applicationVisual}>
             <Image
-              src="/images/press/press-applications.png"
+              src="/images/press/press-applications.webp"
               alt="Press ceramic applications including veneers, inlays, onlays, and crowns"
               width={872}
               height={558}
@@ -129,7 +129,7 @@ export const PressProduct = () => {
           </div>
           <div className={styles.aestheticImageWrap}>
             <Image
-              src="/images/press/press-aesthetic-case.png"
+              src="/images/press/press-aesthetic-case.webp"
               alt="Four natural-looking anterior restorations made with Hairey Press"
               width={470}
               height={470}

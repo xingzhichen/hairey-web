@@ -4,6 +4,13 @@ const nextConfig = {
   output: "standalone",
   // 开启SSR（Next.js默认启用）
   reactStrictMode: true,
+  // 减少响应头暴露并启用生产压缩
+  poweredByHeader: false,
+  compress: true,
+  experimental: {
+    // 优化大型图标库的按需导入
+    optimizePackageImports: ["lucide-react"],
+  },
   // 配置静态资源前缀 (CDN/GCS)
   assetPrefix: process.env.NEXT_PUBLIC_ASSET_HOST || undefined,
   async headers() {
@@ -11,6 +18,15 @@ const nextConfig = {
       // 静态资源 (public/*)
       {
         source: "/images/(.*)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/downloads/(.*)",
         headers: [
           {
             key: "Cache-Control",
@@ -51,6 +67,10 @@ const nextConfig = {
   },
   // 配置 next/image 允许的域名
   images: {
+    formats: ["image/avif", "image/webp"],
+    minimumCacheTTL: 31536000,
+    deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1600, 1920],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     remotePatterns: [
       {
         protocol: 'https',

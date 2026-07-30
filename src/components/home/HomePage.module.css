@@ -18,6 +18,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  animation: heroBackgroundEnter 1.2s ease-out both;
 }
 
 .heroOverlay {
@@ -50,6 +51,7 @@
 
 .heroContent {
   max-width: 42rem;
+  animation: heroContentEnter 0.8s 0.15s cubic-bezier(0, 0, 0.2, 1) both;
 }
 
 .badge {
@@ -123,6 +125,29 @@
   margin-bottom: 1.75rem;
   line-height: 1.8;
   max-width: 38rem;
+}
+
+.heroTitle,
+.heroDescription,
+.buttonGroup,
+.heroMetricStrip {
+  animation: heroContentEnter 0.8s cubic-bezier(0, 0, 0.2, 1) both;
+}
+
+.heroTitle {
+  animation-delay: 0.35s;
+}
+
+.heroDescription {
+  animation-delay: 0.5s;
+}
+
+.buttonGroup {
+  animation-delay: 0.65s;
+}
+
+.heroMetricStrip {
+  animation-delay: 0.78s;
 }
 
 .heroHighlights {
@@ -326,6 +351,7 @@
   width: 16rem;
   height: 16rem;
   background-color: hsl(var(--primary) / 0.1);
+  animation: floatingBlobLift 8s ease-in-out infinite;
 }
 
 .floatingBlob2 {
@@ -334,6 +360,51 @@
   width: 22rem;
   height: 22rem;
   background-color: hsl(var(--accent) / 0.08);
+  animation: floatingBlobDrop 10s ease-in-out infinite;
+}
+
+@keyframes heroBackgroundEnter {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes heroContentEnter {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatingBlobLift {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(-0.95rem) scale(1.05);
+  }
+}
+
+@keyframes floatingBlobDrop {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+  }
+
+  50% {
+    transform: translateY(0.95rem) scale(0.95);
+  }
 }
 
 .productSection {
@@ -412,6 +483,7 @@
 }
 
 .productCard:hover {
+  transform: translateY(-0.625rem);
   box-shadow: 0 24px 45px rgba(15, 23, 42, 0.11);
 }
 
@@ -546,6 +618,7 @@
   cursor: pointer;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .iconBox {
@@ -557,6 +630,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--card-accent, hsl(var(--primary)));
+  transition: transform 0.3s ease, color 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-0.625rem) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover .iconBox {
+  transform: scale(1.12) rotate(5deg);
+  background-color: var(--card-accent, hsl(var(--primary)));
+  color: white;
 }
 
 .cardTitle {
@@ -576,6 +662,11 @@
   align-items: center;
   color: hsl(var(--primary));
   font-weight: 700;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .cardLink {
+  transform: translateX(0.35rem);
 }
 
 .sectionTitle {
@@ -630,6 +721,7 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   backdrop-filter: blur(14px);
   box-shadow: 0 30px 60px rgba(2, 6, 23, 0.28);
+  animation: heroContentEnter 0.8s ease-out both;
 }
 
 .ctaTitle {
@@ -694,6 +786,7 @@
   width: 16rem;
   height: 16rem;
   background-color: hsl(var(--primary) / 0.1);
+  animation: floatingBlobLift 8s ease-in-out infinite;
 }
 
 .ctaBlob2 {
@@ -702,6 +795,34 @@
   width: 24rem;
   height: 24rem;
   background-color: hsl(var(--accent) / 0.1);
+  animation: floatingBlobDrop 10s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heroBackground,
+  .heroContent,
+  .heroTitle,
+  .heroDescription,
+  .buttonGroup,
+  .heroMetricStrip,
+  .floatingBlob1,
+  .floatingBlob2,
+  .ctaBlob1,
+  .ctaBlob2,
+  .ctaPanel {
+    animation: none;
+  }
+
+  .productCard,
+  .card,
+  .iconBox,
+  .cardLink,
+  .primaryButton,
+  .secondaryButton,
+  .ctaPrimary,
+  .ctaSecondary {
+    transition: none;
+  }
 }
 
 @media (max-width: 767px) {

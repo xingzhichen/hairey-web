@@ -1,31 +1,28 @@
-'use client';
-
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 import styles from './HomePage.module.css';
 
 const productItems = [
   {
     title: 'ZircoFuse™ Zirconia',
     desc: 'Hairey’s exclusive ZircoFuse™ Technology fuses proprietary 4Y-TZP and 5Y-TZP zirconia powders via colloidal processing for precise color and exceptional strength.',
-    image: '/images/zirconia.png',
+    image: '/images/zirconia.webp',
     href: '/product/zirconia',
     imageFit: 'cover' as const,
   },
   {
     title: 'PMMA',
     desc: 'Hairey multi-color resin adopts a unique layered design for temporary crowns and bridges, supporting efficient digital workflows and natural-looking results.',
-    image: '/images/pmma.png',
+    image: '/images/pmma.webp',
     href: '/product/pmma',
     imageFit: 'contain' as const,
   },
   {
     title: 'Press',
     desc: 'Hairey Press delivers superior translucency, precise color reproduction, natural mimicry, excellent biocompatibility, and favorable bondability.',
-    image: '/images/Press.png',
+    image: '/images/Press.webp',
     href: '/product/press',
     imageFit: 'contain' as const,
   },
@@ -36,35 +33,18 @@ export const Products = () => {
     <section id="products" className={styles.productSection}>
       <div className={styles.container}>
         <div className={styles.sectionHeading}>
-          <motion.h2
-            className={styles.sectionTitle}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-          >
+          <h2 className={styles.sectionTitle}>
             Hairey Products
-          </motion.h2>
-          <motion.p
-            className={styles.sectionDesc}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
+          </h2>
+          <p className={styles.sectionDesc}>
             From restorative materials to precision tooling, Hairey helps dental labs streamline workflows and achieve consistent, predictable restorations.
-          </motion.p>
+          </p>
         </div>
 
         <div className={styles.productGrid}>
-          {productItems.map((item, i) => (
-            <motion.article
+          {productItems.map((item) => (
+            <article
               key={item.title}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.12, duration: 0.6, ease: 'easeOut' }}
-              whileHover={{ y: -10 }}
               className={styles.productCard}
             >
               <div className={styles.productVisual}>
@@ -84,7 +64,7 @@ export const Products = () => {
                   View Details <ArrowRight size={16} />
                 </Link>
               </div>
-            </motion.article>
+            </article>
           ))}
         </div>
       </div>

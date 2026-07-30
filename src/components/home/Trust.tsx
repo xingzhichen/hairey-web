@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
 import { Activity, Shield, Zap, Microscope, ChevronRight } from 'lucide-react';
-import { motion, Variants } from 'framer-motion';
 import styles from './HomePage.module.css';
 
 const trustItems = [
@@ -33,21 +30,6 @@ const trustItems = [
 ];
 
 export const Trust = () => {
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } },
-  };
-
   return (
     <section className={styles.trustSection}>
       <div className={styles.container}>
@@ -60,45 +42,24 @@ export const Trust = () => {
           </div>
         </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className={styles.grid}
-        >
+        <div className={styles.grid}>
           {trustItems.map((item) => (
-            <motion.div
+            <div
               key={item.title}
-              variants={itemVariants}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-                boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
-              }}
               className={styles.card}
+              style={{ '--card-accent': item.color } as React.CSSProperties}
             >
-              <motion.div
-                className={styles.iconBox}
-                style={{ color: item.color }}
-                whileHover={{
-                  scale: 1.15,
-                  rotate: 5,
-                  backgroundColor: item.color,
-                  color: 'white',
-                }}
-                transition={{ duration: 0.3 }}
-              >
+              <div className={styles.iconBox}>
                 <item.icon size={32} />
-              </motion.div>
-              <motion.h3 className={styles.cardTitle}>{item.title}</motion.h3>
-              <motion.p className={styles.cardDesc}>{item.desc}</motion.p>
-              <motion.div className={styles.cardLink} whileHover={{ x: 5 }} transition={{ duration: 0.3 }}>
+              </div>
+              <h3 className={styles.cardTitle}>{item.title}</h3>
+              <p className={styles.cardDesc}>{item.desc}</p>
+              <div className={styles.cardLink}>
                 Learn More <ChevronRight size={16} />
-              </motion.div>
-            </motion.div>
+              </div>
+            </div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     description: 'Hairey - Next-Gen Dental Biotechnology. Delivering high-performance digital restoration solutions to clinics worldwide.',
     images: [
       {
-        url: 'https://www.hairey.net/images/new-banner.png',
+        url: 'https://www.hairey.net/images/new-banner-og.jpg',
         width: 1200,
         height: 630,
         alt: 'Hairey Dental Biotechnology',
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hairey Dental | Precision Dental Digital Solutions',
     description: 'Hairey - Next-Gen Dental Biotechnology.',
-    images: ['https://www.hairey.net/images/new-banner.png'],
+    images: ['https://www.hairey.net/images/new-banner-og.jpg'],
   }
 };
 

@@ -5,7 +5,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Menu, X, ArrowRight, ChevronDown, Search } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
 import styles from "./Header.module.css";
 
 const navLinks = [
@@ -176,66 +175,58 @@ export const Header = () => {
         </nav>
       </div>
 
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -12 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -12 }}
-            transition={{ duration: 0.22, ease: "easeOut" }}
-            className={styles.mobileMenuWrap}
-          >
-            <div className={styles.mobileMenu}>
-              <div className={styles.mobileIntro}>
-                <span className={styles.mobileEyebrow}>Precision material partner</span>
-                <p>Explore our solutions for labs, distributors, and fast-moving digital workflows.</p>
-              </div>
-
-              <div className={styles.mobileLinks}>
-                {navLinks.slice(0, 2).map((link) => (
-                  <Link
-                    key={link.path}
-                    href={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={[styles.mobileLink, pathname === link.path ? styles.mobileLinkActive : ""].join(" ")}
-                  >
-                    <span>{link.name}</span>
-                    <ArrowRight size={16} />
-                  </Link>
-                ))}
-                <div className={styles.mobileProductGroup}>
-                  <span className={styles.mobileProductLabel}>Products</span>
-                  {productLinks.map((product) => (
-                    <Link
-                      key={product.path}
-                      href={product.path}
-                      onClick={() => setIsOpen(false)}
-                      className={styles.mobileProductLink}
-                    >
-                      {product.name} <ArrowRight size={15} />
-                    </Link>
-                  ))}
-                </div>
-                {navLinks.slice(2).map((link) => (
-                  <Link
-                    key={link.path}
-                    href={link.path}
-                    onClick={() => setIsOpen(false)}
-                    className={[styles.mobileLink, pathname === link.path ? styles.mobileLinkActive : ""].join(" ")}
-                  >
-                    <span>{link.name}</span>
-                    <ArrowRight size={16} />
-                  </Link>
-                ))}
-              </div>
-
-              <Link href="/contact" onClick={() => setIsOpen(false)} className={styles.mobileCta}>
-                Contact Now <ArrowRight size={16} />
-              </Link>
+      {isOpen && (
+        <div className={styles.mobileMenuWrap}>
+          <div className={styles.mobileMenu}>
+            <div className={styles.mobileIntro}>
+              <span className={styles.mobileEyebrow}>Precision material partner</span>
+              <p>Explore our solutions for labs, distributors, and fast-moving digital workflows.</p>
             </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <div className={styles.mobileLinks}>
+              {navLinks.slice(0, 2).map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={[styles.mobileLink, pathname === link.path ? styles.mobileLinkActive : ""].join(" ")}
+                >
+                  <span>{link.name}</span>
+                  <ArrowRight size={16} />
+                </Link>
+              ))}
+              <div className={styles.mobileProductGroup}>
+                <span className={styles.mobileProductLabel}>Products</span>
+                {productLinks.map((product) => (
+                  <Link
+                    key={product.path}
+                    href={product.path}
+                    onClick={() => setIsOpen(false)}
+                    className={styles.mobileProductLink}
+                  >
+                    {product.name} <ArrowRight size={15} />
+                  </Link>
+                ))}
+              </div>
+              {navLinks.slice(2).map((link) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  onClick={() => setIsOpen(false)}
+                  className={[styles.mobileLink, pathname === link.path ? styles.mobileLinkActive : ""].join(" ")}
+                >
+                  <span>{link.name}</span>
+                  <ArrowRight size={16} />
+                </Link>
+              ))}
+            </div>
+
+            <Link href="/contact" onClick={() => setIsOpen(false)} className={styles.mobileCta}>
+              Contact Now <ArrowRight size={16} />
+            </Link>
+          </div>
+        </div>
+      )}
     </header>
   );
 };

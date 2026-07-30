@@ -53,25 +53,25 @@ const statistics = [
 
 const reasons = [
   {
-    image: "/images/about-us/reliable-milling-crown.png",
+    image: "/images/about-us/reliable-milling-crown.webp",
     alt: "Natural zirconia restoration showing smooth milling performance",
     title: "Reliable Milling Performance",
     description: "Smooth cutting, fewer fractures, predictable results.",
   },
   {
-    image: "/images/about-us/natural-aesthetic-crowns.png",
+    image: "/images/about-us/natural-aesthetic-crowns.webp",
     alt: "Dental zirconia restorations with natural shade transitions",
     title: "Natural Aesthetic Outcomes",
     description: "Seamless shade transitions with no visible layer.",
   },
   {
-    image: "/images/about-us/milled-zirconia-disc.png",
+    image: "/images/about-us/milled-zirconia-disc.webp",
     alt: "Multilayer zirconia disc designed for efficient finishing",
     title: "Less Chairside & Lab-side Adjustment",
     description: "Designed to save time in staining, glazing, and finishing.",
   },
   {
-    image: "/images/about-us/zirconia-powder.png",
+    image: "/images/about-us/zirconia-powder.webp",
     alt: "Premium zirconia powder quality and material supply chain",
     title: "Trusted Raw Materials",
     description: "Powered by premium zirconia powder from TOSOH (Japan) and SINOCERA (China).",
@@ -94,7 +94,7 @@ export const About = () => {
 
           <div className={styles.heroVisual}>
             <Image
-              src="/images/about-us/milling-machine-hero.png"
+              src="/images/about-us/milling-machine-hero.webp"
               alt="Dental milling machine shaping restorations from a zirconia disc"
               width={1400}
               height={1284}

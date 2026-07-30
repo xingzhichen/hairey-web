@@ -49,7 +49,7 @@ export const PmmaProduct = () => {
             </div>
             <div className={styles.heroImageWrap}>
               <Image
-                src="/images/pmma/pmma-hero-pages-v2.png"
+                src="/images/pmma/pmma-hero-pages-v2.webp"
                 alt="Monolayer and multilayer dental PMMA discs"
                 width={1257}
                 height={375}
@@ -81,7 +81,7 @@ export const PmmaProduct = () => {
         <div className={`${styles.container} ${styles.splitGrid}`}>
           <div className={styles.workflowImageWrap}>
             <Image
-              src="/images/pmma/pmma-product-range-pages-v2.png"
+              src="/images/pmma/pmma-product-range-pages-v2.webp"
               alt="Hairey PMMA materials for digital denture and restoration workflows"
               fill
               className={styles.coverImage}
@@ -122,7 +122,7 @@ export const PmmaProduct = () => {
           </header>
           <div className={styles.microstructureCard}>
             <Image
-              src="/images/pmma/pmma-microstructure-pages-v2.png"
+              src="/images/pmma/pmma-microstructure-pages-v2.webp"
               alt="Microscope surface comparison between other brands and Hairey PMMA"
               width={1012}
               height={402}

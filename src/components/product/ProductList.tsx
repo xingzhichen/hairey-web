@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
-import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '@/styles/Pages.module.css';
@@ -12,7 +9,7 @@ export const ProductList = () => {
     {
       title: 'ZircoFuse™ Zirconia',
       desc: 'Hairey’s exclusive ZircoFuse™ Technology fuses proprietary 4Y-TZP and 5Y-TZP zirconia powders via colloidal processing, … ',
-      image: '/images/zirconia.png',
+      image: '/images/zirconia.webp',
       href: '/product/zirconia',
       featured: true,
       imageFit: 'cover' as const,
@@ -21,7 +18,7 @@ export const ProductList = () => {
     {
       title: 'PMMA',
       desc: 'Hairey multi-color resin adopts a unique layered design, which can not only be used for the production of temporary crowns and bridges, but also can be used to carve…',
-      image: '/images/pmma.png',
+      image: '/images/pmma.webp',
       href: '/product/pmma',
       imageFit: 'contain' as const,
       imagePosition: 'center'
@@ -29,7 +26,7 @@ export const ProductList = () => {
     {
       title: 'Press',
       desc: 'Hairey Press boasts superior translucency, precise color reproduction, high natural mimicry, excellent biocompatibility and favorable bondability…',
-      image: '/images/Press.png',
+      image: '/images/Press.webp',
       href: '/product/press',
       imageFit: 'contain' as const,
       imagePosition: 'center'
@@ -41,12 +38,8 @@ export const ProductList = () => {
       <div className={styles.container}>
         <div className={styles.productShowcase}>
           {products.map((item, idx) => (
-            <motion.div 
+            <div
               key={idx}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
               className={`${styles.productCard} ${item.featured ? styles.productCardFeatured : ''}`}
             >
               <div className={styles.productImage}>
@@ -73,7 +66,7 @@ export const ProductList = () => {
                   </button>
                 )}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

@@ -1,12 +1,9 @@
-'use client';
-
 /**
  * Service page detailing Hairey's professional services.
  */
 import React from 'react';
 import Image from 'next/image';
 import { Laptop, GraduationCap, Headphones, Settings, CheckCircle2 } from 'lucide-react';
-import { motion } from 'framer-motion';
 import styles from '@/styles/Pages.module.css';
 
 export const Service = () => {
@@ -52,13 +49,9 @@ export const Service = () => {
         </div>
         <div className={styles.container}>
           <div className={styles.heroContent}>
-            <motion.h1 
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className={styles.heroTitle}
-            >
+            <h1 className={styles.heroTitle}>
               专业服务与支持
-            </motion.h1>
+            </h1>
             <p className={styles.heroSubtitle}>
               我们不仅提供卓越的产品，更通过全方位的技术服务，助力牙科机构提升诊疗效率与患者满意度。
             </p>
@@ -71,12 +64,8 @@ export const Service = () => {
         <div className={styles.container}>
           <div className={styles.grid2}>
             {services.map((service, idx) => (
-              <motion.div 
+              <div
                 key={idx}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
                 className={styles.card}
               >
                 <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', marginBottom: '2.5rem' }}>
@@ -95,7 +84,7 @@ export const Service = () => {
                     </div>
                   ))}
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </div>

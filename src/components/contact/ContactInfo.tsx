@@ -1,8 +1,5 @@
-'use client';
-
 import React from 'react';
 import { Mail, MapPin } from 'lucide-react';
-import { motion } from 'framer-motion';
 import styles from '@/styles/Pages.module.css';
 
 export const ContactInfo = () => {
@@ -20,9 +17,8 @@ export const ContactInfo = () => {
           { icon: Mail, title: 'Technical Support', content: 'sales@hairey.net', sub: 'Professional answers for clinical technical questions' },
           { icon: MapPin, title: 'Global Headquarters', content: 'Shenzhen Pingshan High-tech Zone Industry-University-Research Base', sub: '' },
         ].map((item, i) => (
-          <motion.div 
+          <div
             key={i}
-            whileHover={{ x: 10 }}
             style={{ display: 'flex', alignItems: 'flex-start', gap: '1.5rem' }}
           >
             <div className={styles.iconBox} style={{ flexShrink: 0 }}>
@@ -33,7 +29,7 @@ export const ContactInfo = () => {
               <p style={{ fontSize: '1.25rem', fontWeight: 900, color: 'hsl(var(--secondary))' }}>{item.content}</p>
               {item.sub && <p style={{ fontSize: '0.875rem', color: '#64748b', marginTop: '0.25rem' }}>{item.sub}</p>}
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
     </div>

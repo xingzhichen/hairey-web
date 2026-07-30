@@ -317,6 +317,7 @@
 
 .mobileMenuWrap {
   padding: 0 1rem;
+  animation: mobileMenuEnter 0.22s ease-out both;
 }
 
 .mobileMenu {
@@ -414,6 +415,18 @@
   background: var(--gradient-tech);
   color: white;
   font-weight: 800;
+}
+
+@keyframes mobileMenuEnter {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 640px) {
