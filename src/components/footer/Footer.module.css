@@ -55,27 +55,6 @@
   max-width: 20rem;
 }
 
-.socialRow {
-  display: flex;
-  gap: 1rem;
-}
-
-.socialIcon {
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.05);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background-color 0.3s;
-  color: white;
-}
-
-.socialIcon:hover {
-  background-color: hsl(var(--primary));
-}
-
 .columnTitle {
   font-size: 1.125rem;
   font-weight: 700;
@@ -99,6 +78,36 @@
 }
 
 .linkItem:hover {
+  color: hsl(var(--primary));
+}
+
+.productLinkGroup {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.productGroupLabel {
+  color: white;
+  font-weight: 700;
+}
+
+.productSubLinks {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0 0 0 0.8rem;
+  list-style: none;
+  border-left: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.productSubLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.25s ease;
+}
+
+.productSubLink:hover {
   color: hsl(var(--primary));
 }
 

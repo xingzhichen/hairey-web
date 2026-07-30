@@ -37,20 +37,20 @@ export const Contact = () => {
                 </span>
               </a>
 
-              <p className={styles.responseCopy}>
-                You can send messages to us regarding your order requests or questions. We will get
-                back to you within 12 hours.
-              </p>
-
-              <a className={styles.contactMethod} href="mailto:scarlett.guo@hairey.net">
+              <a className={styles.contactMethod} href="mailto:sales@hairey.net">
                 <span className={styles.methodIcon} aria-hidden="true">
                   <Mail size={23} strokeWidth={1.8} />
                 </span>
                 <span>
                   <strong>Email</strong>
-                  <b>scarlett.guo@hairey.net</b>
+                  <b>sales@hairey.net</b>
                 </span>
               </a>
+
+              <p className={styles.responseCopy}>
+                You can send messages to us regarding your order requests or questions. We will get
+                back to you within 12 hours.
+              </p>
             </aside>
 
             <div className={styles.formColumn}>

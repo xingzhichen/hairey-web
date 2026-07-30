@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Cpu, Gauge, Layers3, Sparkles } from "lucide-react";
-import { PmmaInquiryForm } from "./PmmaInquiryForm";
 import styles from "./PmmaProduct.module.css";
+import { ProductSupportForm } from "./ProductSupportForm";
 
 const benefits = [
   { icon: Gauge, label: "Consistency" },
@@ -193,18 +193,7 @@ export const PmmaProduct = () => {
         </div>
       </section>
 
-      <section className={styles.expert} id="expert">
-        <div className={styles.container}>
-          <div className={styles.expertGrid}>
-            <div>
-              <p className={styles.kicker}>Start a conversation</p>
-              <h2>Talk to Our Expert</h2>
-              <p>Tell us about your workflow and our team will help you select the right PMMA solution.</p>
-            </div>
-            <PmmaInquiryForm />
-          </div>
-        </div>
-      </section>
+      <ProductSupportForm productName="PMMA" />
     </div>
   );
 };

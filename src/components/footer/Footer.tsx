@@ -1,13 +1,18 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { Mail, MapPin, Facebook, Twitter, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, MapPin, ArrowUpRight } from "lucide-react";
 import styles from "./Footer.module.css";
 
 const quickLinks = [
   { label: "About Us", href: "/about" },
-  { label: "Products", href: "/product" },
   { label: "Contact Us", href: "/contact" },
+];
+
+const productLinks = [
+  { label: "Zirconia", href: "/product/zirconia" },
+  { label: "PMMA", href: "/product/pmma" },
+  { label: "Press", href: "/product/press" },
 ];
 
 const supportItems = [
@@ -36,19 +41,31 @@ export const Footer = () => {
             <p className={styles.description}>
               Empowering dental professionals worldwide with precision biomaterials and dependable digital workflows.
             </p>
-            <div className={styles.socialRow}>
-              {[Facebook, Twitter, Linkedin].map((Icon, i) => (
-                <a key={i} href="#" className={styles.socialIcon} aria-label="social link">
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className={styles.column}>
             <h4 className={styles.columnTitle}>Quick Links</h4>
             <ul className={styles.linkList}>
-              {quickLinks.map((item) => (
+              {quickLinks.slice(0, 1).map((item) => (
+                <li key={item.href}>
+                  <Link href={item.href} className={styles.linkItem}>
+                    {item.label} <ArrowUpRight size={14} />
+                  </Link>
+                </li>
+              ))}
+              <li className={styles.productLinkGroup}>
+                <span className={styles.productGroupLabel}>Products</span>
+                <ul className={styles.productSubLinks}>
+                  {productLinks.map((item) => (
+                    <li key={item.href}>
+                      <Link href={item.href} className={styles.productSubLink}>
+                        {item.label} <ArrowUpRight size={14} />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+              {quickLinks.slice(1).map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className={styles.linkItem}>
                     {item.label} <ArrowUpRight size={14} />
@@ -76,7 +93,7 @@ export const Footer = () => {
               </li>
               <li className={styles.contactItem}>
                 <Mail size={20} className={styles.icon} />
-                <span>scarlett.guo@hairey.net</span>
+                <span>sales@hairey.net</span>
               </li>
             </ul>
           </div>

@@ -49,9 +49,6 @@ const BottomCTA = () => (
       <Mail size={16} />
       Contact Us
     </Link>
-    <Link href="/contact" className={styles.shopPrimaryButton}>
-      Request Quote
-    </Link>
   </section>
 );
 
@@ -64,14 +61,13 @@ export const ZirconiaProductsCategory = () => {
             <div className={styles.shopBreadcrumb}>
               <Link href="/">Home</Link>
               <span>/</span>
-              <Link href="/product">Products</Link>
+              <Link href="/product/zirconia">Zirconia</Link>
               <span>/</span>
-              <strong>Zirconia</strong>
+              <strong>Product List</strong>
             </div>
             <div className={styles.shopTitleRow}>
               <div>
                 <h1>Zirconia</h1>
-                <p>High-quality multilayer zirconia discs for labs and clinics.</p>
                 <span>{zirconiaProducts.length} products</span>
               </div>
             </div>

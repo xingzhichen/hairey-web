@@ -45,16 +45,7 @@
 }
 
 .heroLayout {
-  display: grid;
-  gap: 2rem;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .heroLayout {
-    grid-template-columns: minmax(0, 1.2fr) minmax(320px, 420px);
-    gap: 3rem;
-  }
+  display: block;
 }
 
 .heroContent {
@@ -341,6 +332,7 @@
 }
 
 .productSection {
+  scroll-margin-top: 6rem;
   padding: 6rem 0;
   background:
     radial-gradient(circle at top left, hsl(var(--primary) / 0.06), transparent 22%),
@@ -355,7 +347,7 @@
 }
 
 .sectionHeading {
-  max-width: 48rem;
+  max-width: 54rem;
   margin-bottom: 3rem;
 }
 
@@ -392,12 +384,6 @@
   gap: 1.5rem;
 }
 
-@media (min-width: 640px) {
-  .productGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 .productCard {
   border: 1px solid hsl(var(--border));
   border-radius: 1.6rem;
@@ -411,16 +397,30 @@
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
+@media (min-width: 768px) {
+  .productCard {
+    display: grid;
+    grid-template-columns: minmax(300px, 42%) minmax(0, 1fr);
+    align-items: stretch;
+    min-height: 280px;
+  }
+}
+
 .productCard:hover {
   box-shadow: 0 24px 45px rgba(15, 23, 42, 0.11);
 }
 
 .productVisual {
   position: relative;
-  height: 190px;
+  min-height: 240px;
   border-radius: 1.3rem;
   overflow: hidden;
   isolation: isolate;
+  background: hsl(var(--muted));
+}
+
+.productImage {
+  object-position: center;
 }
 
 .productOrb {
@@ -463,7 +463,9 @@
 .productCardBody {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 0.9rem;
+  padding: clamp(0.25rem, 2vw, 1.5rem);
 }
 
 .productTitle {
@@ -489,7 +491,7 @@
 }
 
 .productLink {
-  margin-top: auto;
+  margin-top: 0.5rem;
   width: fit-content;
   color: hsl(var(--primary));
   font-weight: 800;
@@ -504,42 +506,8 @@
 }
 
 .trustIntro {
-  display: grid;
-  gap: 1.5rem;
-  align-items: end;
-  margin-bottom: 2.5rem;
-}
-
-@media (min-width: 900px) {
-  .trustIntro {
-    grid-template-columns: minmax(0, 1fr) auto;
-  }
-}
-
-.statsStrip {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(120px, 1fr));
-  gap: 1rem;
-}
-
-.statsItem {
-  background: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.7);
-  border-radius: 1.25rem;
-  padding: 1rem 1.1rem;
-  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
-}
-
-.statsItem strong {
   display: block;
-  font-size: 1.5rem;
-  margin-bottom: 0.25rem;
-  color: hsl(var(--secondary));
-}
-
-.statsItem span {
-  color: hsl(var(--muted-foreground));
-  line-height: 1.5;
+  margin-bottom: 2.5rem;
 }
 
 .grid {
@@ -648,7 +616,7 @@
 }
 
 .ctaPanel {
-  max-width: 56rem;
+  max-width: 62rem;
   margin: 0 auto;
   text-align: center;
   padding: 3rem 1.5rem;
@@ -660,7 +628,7 @@
 }
 
 .ctaTitle {
-  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-size: clamp(2.2rem, 4.2vw, 3.25rem);
   font-weight: 900;
   color: white;
   margin-bottom: 1.25rem;
@@ -672,11 +640,11 @@
 }
 
 .ctaDescription {
-  max-width: 42rem;
+  max-width: 49rem;
   margin: 0 auto 2rem;
   color: rgba(255, 255, 255, 0.82);
   line-height: 1.8;
-  font-size: 1.05rem;
+  font-size: clamp(1.12rem, 2vw, 1.3rem);
 }
 
 .ctaButtons {
@@ -745,8 +713,7 @@
     padding: 1.25rem;
   }
 
-  .heroMetricStrip,
-  .statsStrip {
+  .heroMetricStrip {
     grid-template-columns: 1fr;
   }
 }

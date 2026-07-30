@@ -704,6 +704,11 @@
   color: hsl(var(--primary));
 }
 
+.consistentTrust em {
+  font-style: normal;
+  line-height: 1.2;
+}
+
 .heroBullets {
   display: flex;
   flex-wrap: wrap;
@@ -1566,7 +1571,7 @@
 
 @media (min-width: 800px) {
   .shopBottomCta {
-    grid-template-columns: auto 1fr auto auto;
+    grid-template-columns: auto 1fr auto;
   }
 }
 
@@ -2090,6 +2095,19 @@
   color: hsl(var(--primary));
   font-weight: 900;
   padding: 0 1.5rem;
+}
+
+.productInquiryForm button:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.inquirySpinner {
+  animation: inquirySpin 0.8s linear infinite;
+}
+
+@keyframes inquirySpin {
+  to { transform: rotate(360deg); }
 }
 
 @media (min-width: 640px) {

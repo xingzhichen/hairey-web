@@ -31,15 +31,6 @@ export const CTA = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className={styles.ctaPanel}
         >
-          <motion.span
-            className={styles.sectionEyebrowLight}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1, duration: 0.7 }}
-          >
-            Let’s talk about your next case flow
-          </motion.span>
           <motion.h2
             className={styles.ctaTitle}
             initial={{ opacity: 0, y: 20 }}
@@ -47,7 +38,7 @@ export const CTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2, duration: 0.8 }}
           >
-            Need a partner for your <span className={styles.highlight}>digital dental materials</span> pipeline?
+            Looking for a dental CAD/CAM manufacturing partner?
           </motion.h2>
           <motion.p
             className={styles.ctaDescription}
@@ -56,7 +47,7 @@ export const CTA = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.35, duration: 0.8 }}
           >
-            Share your market, product interest, or sampling need. We’ll help you find the right fit faster with a clearer response path.
+            As a trusted manufacturer of zirconia and PMMA materials, Hairey supports OEM and private-label programs with consistent quality, flexible customization, and dependable production.
           </motion.p>
           <motion.div
             className={styles.ctaButtons}
@@ -67,7 +58,7 @@ export const CTA = () => {
           >
             <motion.div whileHover={{ scale: 1.05, rotate: 1 }} transition={{ duration: 0.3 }}>
               <Link href="/contact" className={styles.ctaPrimary}>
-                Consult an Expert <ArrowRight size={18} />
+                Talk to the Team <ArrowRight size={18} />
               </Link>
             </motion.div>
             <motion.div whileHover={{ scale: 1.05, rotate: -1 }} transition={{ duration: 0.3 }}>

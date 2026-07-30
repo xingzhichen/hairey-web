@@ -32,12 +32,6 @@ const trustItems = [
   },
 ];
 
-const trustStats = [
-  { value: '4', label: 'Core categories' },
-  { value: '100%', label: 'Digital workflow focus' },
-  { value: 'Global', label: 'Distributor support' },
-];
-
 export const Trust = () => {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -59,19 +53,10 @@ export const Trust = () => {
       <div className={styles.container}>
         <div className={styles.trustIntro}>
           <div className={styles.sectionHeadingCompact}>
-            <span className={styles.sectionEyebrow}>Trust signals</span>
             <h2 className={styles.sectionTitle}>Built to feel reliable at every stage of the workflow</h2>
             <p className={styles.sectionDesc}>
               We focus on the details labs care about most: material stability, delivery confidence, and repeatable restorative outcomes.
             </p>
-          </div>
-          <div className={styles.statsStrip}>
-            {trustStats.map((item) => (
-              <div key={item.label} className={styles.statsItem}>
-                <strong>{item.value}</strong>
-                <span>{item.label}</span>
-              </div>
-            ))}
           </div>
         </div>
 
