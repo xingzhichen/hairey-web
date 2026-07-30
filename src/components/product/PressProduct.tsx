@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CircleCheck, Gem, ShieldCheck, Sparkles } from "lucide-react";
-import { PressInquiryForm } from "./PressInquiryForm";
 import styles from "./PressProduct.module.css";
+import { ProductSupportForm } from "./ProductSupportForm";
 
 const applications = [
   "Ultra-thin veneers",
@@ -162,16 +162,7 @@ export const PressProduct = () => {
         </div>
       </section>
 
-      <section className={styles.expert} id="expert">
-        <div className={`${styles.container} ${styles.expertGrid}`}>
-          <div>
-            <p className={styles.kicker}>Product support</p>
-            <h2>Talk to Our Expert</h2>
-            <p>Request the Hairey product brochure and discuss the right Press solution for your laboratory.</p>
-          </div>
-          <PressInquiryForm />
-        </div>
-      </section>
+      <ProductSupportForm productName="Press" />
     </div>
   );
 };

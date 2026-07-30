@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ArrowLeft, ArrowRight, CheckCircle2, Download, Gem, ShieldCheck, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { zirconiaProducts } from '@/data/zirconiaProducts';
+import { ProductSupportForm } from './ProductSupportForm';
 import styles from '@/styles/Pages.module.css';
 
 const featureCards = [
@@ -29,7 +30,7 @@ const featureCards = [
 const stats = [
   { value: '10+', label: 'Years Experience' },
   { value: '50+', label: 'Countries' },
-  { value: '200+', label: 'Products' }
+  { value: '200+', label: 'R&D Team Members' }
 ];
 
 const shades = ['A1', 'A2', 'A3', 'B1', 'BL1', 'BL2', 'BL3'];
@@ -53,11 +54,6 @@ export const ZirconiaProduct = () => {
     <div className={styles.pageContainer}>
       <section className={styles.productDetailHero}>
         <div className={styles.container}>
-          <Link href="/product" className={styles.backLink}>
-            <ArrowLeft size={18} />
-            Products
-          </Link>
-
           <div className={styles.productDetailHeroGrid}>
             <motion.div
               initial={{ opacity: 0, y: 24 }}
@@ -75,7 +71,7 @@ export const ZirconiaProduct = () => {
                 Hairey’s exclusive ZircoFuse™ Technology fuses proprietary 4Y-TZP and 5Y-TZP zirconia powders via colloidal processing, with precise color matching and exceptional strength.
               </p>
               <div className={styles.heroActions}>
-                <Link href="/contact" className={styles.primaryAction}>
+                <Link href="#product-support" className={styles.primaryAction}>
                   Request Sample <ArrowRight size={18} />
                 </Link>
                 <a
@@ -89,7 +85,7 @@ export const ZirconiaProduct = () => {
               <div className={styles.heroTrustRow}>
                 <span><ShieldCheck size={18} /> Trusted by Professionals</span>
                 <span><Gem size={18} /> Engineered for Excellence</span>
-                <span><CheckCircle2 size={18} /> Consistent Results</span>
+                <span className={styles.consistentTrust}><CheckCircle2 size={18} /> <em>Consistent<br />Results</em></span>
               </div>
             </motion.div>
 
@@ -304,28 +300,7 @@ export const ZirconiaProduct = () => {
         </div>
       </section>
 
-      <section className={styles.productInquirySection}>
-        <div className={styles.container}>
-          <div className={styles.inquiryPanel}>
-            <div className={styles.inquiryCopy}>
-              <span className={styles.sectionKicker}>Zirconia Products</span>
-              <h2>Would like to learn more about our products?</h2>
-              <p>Connect with our expert for product details, samples, partnership opportunities, and technical guidance.</p>
-            </div>
-            <form className={styles.productInquiryForm}>
-              <input aria-label="First name" placeholder="First name" />
-              <input aria-label="Last name" placeholder="Last name" />
-              <input aria-label="Email" placeholder="Email" type="email" />
-              <input aria-label="Organization" placeholder="Organization" />
-              <input aria-label="Post code" placeholder="Post code" />
-              <input aria-label="Country" placeholder="Country" />
-              <button type="button">
-                Connect With Us <ArrowRight size={18} />
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
+      <ProductSupportForm productName="Zirconia" />
     </div>
   );
 };

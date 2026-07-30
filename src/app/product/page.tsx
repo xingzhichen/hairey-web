@@ -1,7 +1,7 @@
-import { Product } from '@/components/pages/Product';
+import { redirect } from 'next/navigation';
 
 export const revalidate = 3600;
 
 export default function Page() {
-  return <Product />;
+  redirect('/#products');
 }

@@ -93,7 +93,6 @@ export const About = () => {
           </div>
 
           <div className={styles.heroVisual}>
-            <div className={styles.heroGlow} aria-hidden="true" />
             <Image
               src="/images/about-us/milling-machine-hero.png"
               alt="Dental milling machine shaping restorations from a zirconia disc"
@@ -105,7 +104,6 @@ export const About = () => {
             />
           </div>
         </div>
-        <div className={styles.heroWave} aria-hidden="true" />
       </section>
 
       <section className={styles.provides} aria-labelledby="provides-title">

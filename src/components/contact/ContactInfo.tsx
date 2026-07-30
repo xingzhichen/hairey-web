@@ -17,7 +17,7 @@ export const ContactInfo = () => {
       
       <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
         {[
-          { icon: Mail, title: 'Technical Support', content: 'scarlett.guo@hairey.net', sub: 'Professional answers for clinical technical questions' },
+          { icon: Mail, title: 'Technical Support', content: 'sales@hairey.net', sub: 'Professional answers for clinical technical questions' },
           { icon: MapPin, title: 'Global Headquarters', content: 'Shenzhen Pingshan High-tech Zone Industry-University-Research Base', sub: '' },
         ].map((item, i) => (
           <motion.div 

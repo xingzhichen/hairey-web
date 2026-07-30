@@ -167,9 +167,6 @@ export const ZirconiaProductDetail = ({ product }: Props) => {
               <Mail size={16} />
               Contact Us
             </Link>
-            <Link href="/contact" className={styles.shopPrimaryButton}>
-              Request Quote
-            </Link>
           </div>
         </div>
       </section>

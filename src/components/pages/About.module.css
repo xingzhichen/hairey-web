@@ -18,9 +18,7 @@
   min-height: 520px;
   display: flex;
   align-items: center;
-  background:
-    radial-gradient(circle at 82% 20%, rgba(22, 135, 217, 0.11), transparent 29%),
-    linear-gradient(115deg, #fff 0%, #fff 48%, #f2f8fe 100%);
+  background: #fff;
 }
 
 .heroInner {
@@ -68,42 +66,25 @@
   align-items: center;
 }
 
-.heroGlow {
-  position: absolute;
-  width: 75%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: rgba(22, 135, 217, 0.12);
-  filter: blur(45px);
-  right: 2%;
-  top: 6%;
-}
-
 .heroImage {
   position: relative;
   width: 106%;
   height: auto;
   max-width: none;
   transform: translate(1%, -1%);
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 22px 30px rgba(15, 67, 122, 0.09));
-}
-
-.heroWave {
-  position: absolute;
-  left: -5%;
-  right: -5%;
-  bottom: -34px;
-  height: 95px;
-  border-radius: 50% 50% 0 0;
-  background: linear-gradient(180deg, rgba(220, 238, 253, 0.72), rgba(255, 255, 255, 0));
-  transform: rotate(-2deg);
+  filter: drop-shadow(0 22px 30px rgba(15, 23, 42, 0.08));
 }
 
 .provides,
 .trusted,
 .reasons {
   padding: 72px 0;
+}
+
+.provides {
+  background:
+    radial-gradient(circle at 50% -100%, rgba(22, 135, 217, 0.16), transparent 58%),
+    #eaf5fd;
 }
 
 .sectionHeader {
@@ -169,9 +150,7 @@
 }
 
 .trusted {
-  background:
-    radial-gradient(circle at 50% -100%, rgba(22, 135, 217, 0.13), transparent 55%),
-    #f3f8fd;
+  background: #fff;
 }
 
 .trusted .sectionHeader {
@@ -212,6 +191,7 @@
 
 .reasons {
   padding-bottom: 110px;
+  background: #fff;
 }
 
 .reasonGrid {

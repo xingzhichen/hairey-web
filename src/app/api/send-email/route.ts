@@ -12,7 +12,7 @@ export async function POST(request: Request) {
       );
     }
 
-    const RECIPIENT_EMAIL = 'scarlett.guo@hairey.net';
+    const RECIPIENT_EMAIL = 'sales@hairey.net';
     const SMTP_HOST = 'smtp.gmail.com';
     const SMTP_PORT = 465;
     const SMTP_USER =  'xingzhichenshuai@gmail.com';
