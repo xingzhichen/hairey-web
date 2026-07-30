@@ -112,6 +112,11 @@
   letter-spacing: -0.05em;
 }
 
+.heroGradientWord {
+  display: inline-block;
+  padding-right: 0.1em;
+}
+
 .heroDescription {
   font-size: 1.125rem;
   color: hsl(var(--muted-foreground));
