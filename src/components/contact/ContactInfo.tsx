@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, MapPin } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from '@/styles/Pages.module.css';
 

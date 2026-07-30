@@ -4,6 +4,7 @@
  * Service page detailing Hairey's professional services.
  */
 import React from 'react';
+import Image from 'next/image';
 import { Laptop, GraduationCap, Headphones, Settings, CheckCircle2 } from 'lucide-react';
 import { motion } from 'framer-motion';
 import styles from '@/styles/Pages.module.css';
@@ -41,9 +42,11 @@ export const Service = () => {
       {/* Hero Section */}
       <section className={styles.heroSection}>
         <div className={styles.heroBgOverlay} style={{ opacity: 0.2 }}>
-          <img 
+          <Image 
             src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=2070&auto=format&fit=crop" 
-            className={styles.heroBgImage}
+            fill
+            sizes="100vw"
+            style={{ objectFit: 'cover' }}
             alt="Service hero"
           />
         </div>
